@@ -88,11 +88,11 @@ export default function Home() {
           <div className="dashboard-board-card reveal-fade">
             <div className="dashboard-card-header">
               <h2>{t('community.sectionNotice')}</h2>
-              <a href="/community" className="more-view-link">전체보기 +</a>
+              <a href="/community" className="more-view-link">{t('community.viewAll')}</a>
             </div>
             
             {loadingNotices ? (
-              <div className="board-loading">Loading announcements...</div>
+              <div className="board-loading">{t('community.loadingNotices')}</div>
             ) : (
               <div className="portal-board-list">
                 {recentNotices.length === 0 ? (

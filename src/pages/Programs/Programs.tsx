@@ -45,7 +45,7 @@ export default function Programs() {
 
       <div className="container page-content">
         <section className="content-section" style={{ paddingBottom: '60px' }}>
-          <h2 className="program-category-title">{t('programs.title')} (BTF Core Programs)</h2>
+          <h2 className="program-category-title">{t('programs.title')}</h2>
           <div className="programs-grid" style={{ marginTop: '24px' }}>
             {programsData.map((p, idx) => (
               <div 

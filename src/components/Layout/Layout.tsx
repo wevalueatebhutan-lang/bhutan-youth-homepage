@@ -61,7 +61,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="utility-right">
             {/* Language Switcher */}
             <button className="lang-switcher-btn" onClick={toggleLanguage}>
-              🌐 {i18n.language === 'ko' ? 'English (EN)' : '한국어 (KR)'}
+              {i18n.language === 'ko' ? 'English' : '한국어'}
             </button>
             <span className="divider">|</span>
             <Link to="/admin/login" className="admin-login-link">Admin Login</Link>
@@ -134,7 +134,7 @@ export default function Layout({ children }: LayoutProps) {
             </nav>
             <div className="drawer-footer">
               <button className="lang-switcher-btn-m" onClick={toggleLanguage}>
-                🌐 {i18n.language === 'ko' ? 'English (EN)' : '한국어 (KR)'}
+                {i18n.language === 'ko' ? 'English' : '한국어'}
               </button>
             </div>
           </div>

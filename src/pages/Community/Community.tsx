@@ -96,10 +96,10 @@ export default function Community() {
         {/* ── TAB FILTER CONTROLLER ── */}
         <div className="portal-tab-container">
           {[
-            { key: 'all', label: '전체 (All)' },
-            { key: 'notices', label: '공지사항 (Notices)' },
-            { key: 'gallery', label: '활동 사진첩 (Gallery)' },
-            { key: 'facebook', label: '페이스북 소식 (Facebook)' },
+            { key: 'all', label: t('community.tabs.all') },
+            { key: 'notices', label: t('community.tabs.notices') },
+            { key: 'gallery', label: t('community.tabs.gallery') },
+            { key: 'facebook', label: t('community.tabs.facebook') },
           ].map((tab) => (
             <button
               key={tab.key}
@@ -122,16 +122,16 @@ export default function Community() {
             </div>
             
             {loadingNotices ? (
-              <div style={{ color: 'var(--color-text-muted)', padding: '40px 0', textAlign: 'center' }}>Loading notices...</div>
+              <div style={{ color: 'var(--color-text-muted)', padding: '40px 0', textAlign: 'center' }}>{t('community.loadingNotices')}</div>
             ) : (
               <div className="portal-table-container">
                 <table className="portal-notice-table">
                   <thead>
                     <tr>
-                      <th style={{ width: '10%' }}>No.</th>
-                      <th style={{ width: '15%' }}>분류 (Tag)</th>
-                      <th style={{ width: '60%' }}>제목 (Title)</th>
-                      <th style={{ width: '15%' }}>등록일 (Date)</th>
+                      <th style={{ width: '10%' }}>{t('community.table.no')}</th>
+                      <th style={{ width: '15%' }}>{t('community.table.tag')}</th>
+                      <th style={{ width: '60%' }}>{t('community.table.title')}</th>
+                      <th style={{ width: '15%' }}>{t('community.table.date')}</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -47,15 +47,18 @@
     "structureTitle": "연맹 조직 및 지부 안내",
     "tableColDivision": "구분",
     "tableColMembers": "주요 구성 및 인원",
-    "execBoard": "의결 기구 (Executive Board)",
+    "execBoard": "의결 기구",
     "execBoardMembers": "총재 1명, 부총재 2명, 사무총장 1명, 집행위원 7명",
-    "secretariat": "행정 사무국 (Secretariat)",
+    "secretariat": "행정 사무국",
     "secretariatMembers": "팀푸 본부 사무국장 1명, 행정 대리 2명, 회계 담당 1명",
-    "regionalDTA": "지역 지부 (Regional DTAs)",
+    "regionalDTA": "지역 지부",
     "regionalDTAMembers": "전국 10개 종카(Dzongkhag) 태권도 협회 지부 사범 10명 파견 운영",
     "locationTitle": "찾아오는 길",
     "locationDesc": "부탄태권도연맹 트레이닝 센터 및 행정 사무국 위치 안내",
-    "openMaps": "구글 지도에서 크게 보기"
+    "officeAddress": "사무소 주소",
+    "contacts": "연락처 안내",
+    "googleMapsCode": "구글 지도 위치 코드",
+    "openMaps": "구글 지도에서 위치 보기"
   },
   "project": {
     "badge": "ODA Project",
@@ -65,6 +68,14 @@
     "tabMilestones": "사업 추진 현황",
     "tabCenter": "아이코닉 센터 건립",
     "overviewDesc": "본 프로젝트는 한국국제협력단(KOICA)의 지원을 받아 수행되는 공적개발원조(ODA) 사업입니다. 사업의 수행 관리(PMC)는 (사)한국국제개발협력센터(KIDC)가 담당하고 있으며, 스포츠(태권도) 수련에 보건위생 교육과 가치 함양 교육을 융합하여 부탄 청소년들의 전인적 역량 강화를 목적으로 합니다.",
+    "pillarsTitle": "사업 핵심 추진 영역",
+    "pillar1Title": "체육 수련",
+    "pillar1Desc": "전국 종카 학교 사범 파견을 통한 청소년 신체 단련 및 자존감 고취",
+    "pillar2Title": "보건 위생",
+    "pillar2Desc": "개인위생 지침, 감염병 대처, 성교육 가이드라인 개발 및 배포",
+    "pillar3Title": "인성 덕목",
+    "pillar3Desc": "태권도 5대 정신을 결합한 사회 공동체적 규범과 가치관 확립",
+    "milestonesSubtitle": "연도별 세부 추진 실적 및 향후 계획 로드맵 정보입니다.",
     "centerDesc": "부탄 팀푸에 건립 중인 아이코닉 센터는 청소년들을 위한 최초의 다목적 전용 교육·체육 시설로서, 완공 후 연맹의 메인 도장 및 세미나 허브로 사용됩니다.",
     "timeline": {
       "t2023": "ODA 사업 착수 및 타당성 조사",
@@ -76,24 +87,31 @@
       "t2026": "아이코닉 센터 완공 및 현지 이관 준비 (예정)",
       "d2026": "연말 공식 개관 후, 교육 매뉴얼 및 인프라 관리 권한을 부탄태권도연맹(BTF)에 전면 이전."
     },
-    "centerProgressTitle": "센터 건립 공정률 (Construction Progress)",
+    "centerProgressTitle": "센터 건립 공정률",
     "centerProgressDesc": "2026년 말 완공 및 개관을 목표로 골조 공사를 완료하고 내부 설비 마감 공정이 한창 진행 중입니다.",
-    "centerTableTitle": "층별 용도 및 면적 제원 (Facility Specifications)",
-    "tableColFloor": "구분 (Floor)",
-    "tableColUse": "주요 용도 (Primary Use)",
-    "tableColArea": "면적 (Area)",
-    "floor1": "1층 (First Floor)",
-    "use1": "메인 태권도 수련 경기장 및 탈의실, 샤워실",
-    "floor2": "2층 (Second Floor)",
-    "use2": "체력단련실, 다목적 강의실 및 시각 교육 세미나실",
-    "floor3": "3층 (Third Floor)",
-    "use3": "연맹 사무국 행정 집무실, 강사 숙소 및 귀빈실"
+    "centerTableTitle": "층별 용도 및 면적 제원",
+    "tableColFloor": "구분",
+    "tableColRoom": "공간 명칭",
+    "tableColArea": "면적 규모",
+    "tableColUse": "주요 운영 목적",
+    "floor1": "1층",
+    "room1": "국제 규격 태권도 경기장 및 대강당 (도장)",
+    "area1": "약 450 ㎡",
+    "use1": "전국 대회, 시범 공연, 종합 승단 심사 및 합동 수련",
+    "floor2": "2층",
+    "room2": "태권도 전용 제2수련실 및 체력 단련실",
+    "area2": "약 280 ㎡",
+    "use2": "시범단 집중 훈련, 기초 물리 치료 및 체력 기량 평가",
+    "floor3": "3층",
+    "room3": "청소년 가치·보건 세미나실 및 연맹 사무소",
+    "area3": "약 150 ㎡",
+    "use3": "연맹 운영 사무, 청소년 소규모 세미나 및 보건 가치 교육실"
   },
   "programs": {
     "badge": "태권도 활동",
     "title": "핵심 교육 보급 사업",
     "subtitle": "부탄태권도연맹이 전국적으로 전개하고 있는 핵심 훈련 및 보급 프로그램입니다.",
-    "viewDetails": "수련 안내 보기",
+    "viewDetails": "수련 요강 보기",
     "modalDetailsTitle": "세부 운영 요강 및 지원 대상",
     "close": "닫기",
     "taekwondo": {
@@ -118,9 +136,9 @@
       "title": "스포츠 과학 기반 지도자 자격 연수",
       "desc": "현지 지도자들의 자질 향상을 위해 스포츠 과학 자격 코스(Sports Science Course) 및 기술 세미나를 정기 개최하여 전문적이고 안전한 교육 인프라를 만듭니다.",
       "details": [
-        "연수 과목: 스포츠 과학 기초 코스(Sports Science Course), 부상 방지 응급 처치, 아동 청소년 스포츠 안전 지도법",
+        "연수 과목: 스포츠 과학 기초 코스, 부상 방지 응급 처치, 아동 청소년 스포츠 안전 지도법",
         "대상 범위: 전국 지부(DTA) 소속 지도 사범 및 예비 주니어 조교",
-        "기대 성과: 부탄 스포츠 지도자 역량의 국제 표준화 규격 획득 및 dojang 운영 안전도 확보"
+        "기대 성과: 부탄 스포츠 지도자 역량의 국제 표준화 규격 획득 및 도장 운영 안전도 확보"
       ]
     }
   },
@@ -128,6 +146,21 @@
     "badge": "Notice Board",
     "title": "알림 · 소식",
     "subtitle": "부탄태권도연맹의 실시간 공지사항 및 공식 뉴스 타임라인을 확인하세요.",
+    "tabs": {
+      "all": "전체",
+      "notices": "공지사항",
+      "gallery": "활동 사진첩",
+      "facebook": "페이스북 소식"
+    },
+    "table": {
+      "no": "No.",
+      "tag": "분류",
+      "title": "제목",
+      "date": "등록일"
+    },
+    "viewAll": "전체보기 +",
+    "loadingNotices": "공지사항을 불러오는 중입니다...",
+    "loadingPhotos": "사진을 불러오는 중입니다...",
     "sectionNotice": "공지사항",
     "sectionGallery": "활동 사진첩",
     "sectionFacebook": "페이스북 소식",

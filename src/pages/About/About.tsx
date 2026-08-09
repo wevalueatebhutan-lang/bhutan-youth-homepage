@@ -51,7 +51,7 @@ export default function About() {
         {/* 조직도 / 연맹 지부 정보 */}
         <section className="content-section reveal-fade" style={{ textAlign: 'left', paddingBottom: '30px' }}>
           <div className="section-header-border">
-            <h2>{t('about.structureTitle')} (BTF Structure)</h2>
+            <h2>{t('about.structureTitle')}</h2>
           </div>
           
           <div className="portal-table-container" style={{ marginTop: '20px' }}>
@@ -91,7 +91,7 @@ export default function About() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px', alignItems: 'start' }}>
             {/* Left: Google Map Embed */}
-            <div style={{ border: '1px solid var(--border)', borderRadius: '8px', overflow: 'hidden', height: '350px', boxShadow: 'var(--shadow)' }}>
+            <div style={{ border: '1px solid var(--border)', borderRadius: '4px', overflow: 'hidden', height: '350px', boxShadow: 'var(--shadow)' }}>
               <iframe
                 title="Bhutan Taekwondo Federation Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.098485292376!2d89.63690327618957!3d27.466170676420556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39610fc92ee05b9b%3A0x56ed7f7ff79979ee!2sTaekwondo%20Training%20Center!5e0!3m2!1sko!2skr!4v1786392000000!5m2!1sko!2skr"
@@ -105,17 +105,17 @@ export default function About() {
             </div>
 
             {/* Right: Address detail card */}
-            <div style={{ background: '#f8fafc', border: '1px solid var(--border)', borderRadius: '8px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: 'var(--shadow)', textAlign: 'left', minHeight: '350px', justifyContent: 'space-between' }}>
+            <div style={{ background: '#ffffff', border: '1px solid #cbd5e1', borderLeft: '5px solid var(--accent)', borderRadius: '2px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: '0 1px 3px rgba(0,0,0,0.02)', textAlign: 'left', minHeight: '350px', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div>
-                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>🏢 Office Address</h4>
+                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>{t('about.officeAddress')}</h4>
                   <p style={{ margin: 0, fontSize: '0.92rem', color: '#0f172a', fontWeight: 700, lineHeight: '1.5' }}>
                     {t('footer.address')}
                   </p>
                 </div>
 
                 <div>
-                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>📞 Contacts</h4>
+                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>{t('about.contacts')}</h4>
                   <p style={{ margin: '0 0 6px', fontSize: '0.92rem', color: '#0f172a', fontWeight: 700 }}>
                     Tel: +975 02 339899
                   </p>
@@ -125,7 +125,7 @@ export default function About() {
                 </div>
 
                 <div>
-                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>📍 Google Maps Code</h4>
+                  <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>{t('about.googleMapsCode')}</h4>
                   <p style={{ margin: 0, fontSize: '0.92rem', color: '#475569', fontWeight: 600 }}>
                     FJCM+M7G, Doeboom Lam, Thimphu, Bhutan
                   </p>
@@ -148,7 +148,7 @@ export default function About() {
                   textDecoration: 'none'
                 }}
               >
-                📍 {t('about.openMaps')}
+                {t('about.openMaps')}
               </a>
             </div>
           </div>

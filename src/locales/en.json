@@ -55,7 +55,10 @@
     "regionalDTAMembers": "10 Active Coaches dispatched to 10 Dzongkhag Taekwondo Associations",
     "locationTitle": "Location & Directions",
     "locationDesc": "BTF Training Center & Administrative Headquarters Location",
-    "openMaps": "Open in Google Maps"
+    "officeAddress": "Office Address",
+    "contacts": "Contacts",
+    "googleMapsCode": "Google Maps Code",
+    "openMaps": "View on Google Maps"
   },
   "project": {
     "badge": "ODA Project",
@@ -65,6 +68,14 @@
     "tabMilestones": "Milestones",
     "tabCenter": "Iconic Center",
     "overviewDesc": "Supported by the Korea International Cooperation Agency (KOICA), this ODA project aims to foster the capacity of Bhutanese youth by integrating physical training (Taekwondo) with global health education and core value alignment. The project is managed by the Korea International Development Cooperation Center (KIDC) as the Project Management Consultant (PMC).",
+    "pillarsTitle": "Core Strategic Pillars",
+    "pillar1Title": "Sports Training",
+    "pillar1Desc": "Physical training and self-esteem enhancement through nationwide school master dispatch",
+    "pillar2Title": "Health & Hygiene",
+    "pillar2Desc": "Developing and distributing guidelines for personal hygiene, disease prevention, and health education",
+    "pillar3Title": "Value & Character",
+    "pillar3Desc": "Establishing civic norms and moral values rooted in the 5 core tenets of Taekwondo",
+    "milestonesSubtitle": "Annual progress achievements and future project milestones roadmap.",
     "centerDesc": "Under construction in Thimphu, the Iconic Center serves as the primary hub for multi-purpose youth sports and educational training.",
     "timeline": {
       "t2023": "ODA Project Initiation & Feasibility Study",
@@ -80,14 +91,21 @@
     "centerProgressDesc": "Targeting completion by late 2026, framework concrete works are completed, and interior utility installations are actively ongoing.",
     "centerTableTitle": "Floor Plan & Specifications",
     "tableColFloor": "Floor",
-    "tableColUse": "Primary Use",
+    "tableColRoom": "Facility Room",
     "tableColArea": "Area",
+    "tableColUse": "Primary Purpose",
     "floor1": "1st Floor",
-    "use1": "Main Taekwondo training arena, changing rooms, and shower facilities",
+    "room1": "Main Taekwondo Training Arena & Hall (Dojang)",
+    "area1": "Approx. 450 ㎡",
+    "use1": "National championships, demonstrations, belt promotions, and joint training",
     "floor2": "2nd Floor",
-    "use2": "Gymnasium, multi-purpose lecture rooms, and visual media seminar rooms",
+    "room2": "Secondary Training Hall & Gymnasium",
+    "area2": "Approx. 280 ㎡",
+    "use2": "National team training, physiotherapy, and athletic fitness evaluation",
     "floor3": "3rd Floor",
-    "use3": "Administrative secretariat offices, instructor quarters, and VIP lounge"
+    "room3": "Youth Value & Health Seminar Rooms & BTF Headquarters",
+    "area3": "Approx. 150 ㎡",
+    "use3": "Administrative offices, small-scale youth seminars, and value education"
   },
   "programs": {
     "badge": "Activities",
@@ -128,6 +146,21 @@
     "badge": "Notice Board",
     "title": "News & Community",
     "subtitle": "Check out active announcements and press releases from BTF.",
+    "tabs": {
+      "all": "All",
+      "notices": "Notices",
+      "gallery": "Gallery",
+      "facebook": "Facebook"
+    },
+    "table": {
+      "no": "No.",
+      "tag": "Category",
+      "title": "Title",
+      "date": "Date"
+    },
+    "viewAll": "View All +",
+    "loadingNotices": "Loading announcements...",
+    "loadingPhotos": "Loading photos...",
     "sectionNotice": "Notice",
     "sectionGallery": "Gallery",
     "sectionFacebook": "Facebook Timeline",

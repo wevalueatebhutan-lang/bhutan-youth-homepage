@@ -91,7 +91,9 @@ export default function AdminLogin() {
   return (
     <div className="admin-login-page">
       <div className="login-card">
-        <div className="login-logo">🥋</div>
+        <div className="login-logo" style={{ marginBottom: '16px' }}>
+          <img src="/logo.png" alt="BTF Logo" style={{ width: '64px', height: '64px', objectFit: 'contain' }} />
+        </div>
         <h1>Admin Dashboard</h1>
         <p className="login-subtitle">Bhutan Taekwondo Federation</p>
         

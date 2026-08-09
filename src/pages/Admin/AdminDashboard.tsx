@@ -165,19 +165,22 @@ export default function AdminDashboard() {
     <div className="admin-dashboard">
       {/* Sidebar */}
       <div className="admin-sidebar">
-        <div className="admin-brand">🥋 BTF Portal Admin</div>
+        <div className="admin-brand" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <img src="/logo.png" alt="BTF Logo" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+          <span>BTF Portal Admin</span>
+        </div>
         <nav className="admin-nav">
           <button
             className={`admin-nav-btn ${activeTab === 'notices' ? 'active' : ''}`}
             onClick={() => setActiveTab('notices')}
           >
-            📢 Notices Management
+            Notices Management
           </button>
           <button
             className={`admin-nav-btn ${activeTab === 'gallery' ? 'active' : ''}`}
             onClick={() => setActiveTab('gallery')}
           >
-            📸 Gallery Management
+            Gallery Management
           </button>
         </nav>
       </div>
@@ -197,7 +200,7 @@ export default function AdminDashboard() {
               letterSpacing: '0.02em'
             }}
           >
-            🚪 Sign Out
+            Sign Out
           </button>
         </div>
 
@@ -207,14 +210,14 @@ export default function AdminDashboard() {
             <>
               {/* Publish Form */}
               <div className="admin-card">
-                <h3>Publish New Notice (공지사항 등록)</h3>
+                <h3>Publish New Notice</h3>
                 <form onSubmit={handlePublishNotice} className="admin-form">
                   <div className="form-row">
                     <div className="admin-form-group">
-                      <label>TITLE (제목)</label>
+                      <label>Title</label>
                       <input
                         type="text"
-                        placeholder="공지 제목을 입력하세요..."
+                        placeholder="Enter notice title..."
                         value={noticeTitle}
                         onChange={(e) => setNoticeTitle(e.target.value)}
                         disabled={loadingNotice}
@@ -222,23 +225,23 @@ export default function AdminDashboard() {
                       />
                     </div>
                     <div className="admin-form-group" style={{ maxWidth: '280px' }}>
-                      <label>CATEGORY TAG (태그 분류)</label>
+                      <label>Category Tag</label>
                       <select
                         value={noticeTag}
                         onChange={(e) => setNoticeTag(e.target.value)}
                         disabled={loadingNotice}
                       >
-                        <option value="update">공사 현황 (Construction)</option>
-                        <option value="event">행사/뉴스 (Events & News)</option>
-                        <option value="report">ODA 보고서 (ODA Report)</option>
+                        <option value="update">Construction</option>
+                        <option value="event">Events & News</option>
+                        <option value="report">ODA Report</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="admin-form-group">
-                    <label>CONTENT (내용)</label>
+                    <label>Content</label>
                     <textarea
-                      placeholder="공지할 상세 내용을 입력하세요..."
+                      placeholder="Enter detailed notice content..."
                       value={noticeContent}
                       onChange={(e) => setNoticeContent(e.target.value)}
                       disabled={loadingNotice}
@@ -253,7 +256,7 @@ export default function AdminDashboard() {
                       disabled={loadingNotice}
                       style={{ padding: '12px 32px', fontWeight: 700 }}
                     >
-                      {loadingNotice ? 'Publishing...' : '📢 Publish Notice'}
+                      {loadingNotice ? 'Publishing...' : 'Publish Notice'}
                     </button>
                   </div>
                 </form>
@@ -261,9 +264,9 @@ export default function AdminDashboard() {
 
               {/* Notice List */}
               <div className="admin-card">
-                <h3>Published Notices (등록된 공지사항 목록)</h3>
+                <h3>Published Notices</h3>
                 {notices.length === 0 ? (
-                  <div className="empty-state">등록된 공지사항이 없습니다. 새로운 소식을 발행해 보세요.</div>
+                  <div className="empty-state">No published notices found. Post a new announcement above.</div>
                 ) : (
                   <div className="admin-table-container">
                     <table className="admin-table">
@@ -308,14 +311,14 @@ export default function AdminDashboard() {
             <>
               {/* Upload Form */}
               <div className="admin-card">
-                <h3>Upload New Gallery Photo (사진첩 등록)</h3>
+                <h3>Upload New Gallery Photo</h3>
                 <form onSubmit={handleUploadGallery} className="admin-form">
                   <div className="form-row">
                     <div className="admin-form-group">
-                      <label>TITLE / CAPTION (사진 설명)</label>
+                      <label>Photo Caption</label>
                       <input
                         type="text"
-                        placeholder="사진에 대한 한 줄 설명을 적어주세요..."
+                        placeholder="Enter caption for the photo..."
                         value={galleryTitle}
                         onChange={(e) => setGalleryTitle(e.target.value)}
                         disabled={loadingGallery}
@@ -323,7 +326,7 @@ export default function AdminDashboard() {
                       />
                     </div>
                     <div className="admin-form-group">
-                      <label>IMAGE FILE (이미지 파일)</label>
+                      <label>Image File</label>
                       <input
                         id="gallery-file"
                         type="file"
@@ -342,7 +345,7 @@ export default function AdminDashboard() {
                       disabled={loadingGallery}
                       style={{ padding: '12px 32px', fontWeight: 700 }}
                     >
-                      {loadingGallery ? 'Uploading Image...' : '📸 Upload Photo'}
+                      {loadingGallery ? 'Uploading Image...' : 'Upload Photo'}
                     </button>
                   </div>
                 </form>
@@ -350,9 +353,9 @@ export default function AdminDashboard() {
 
               {/* Gallery Grid */}
               <div className="admin-card">
-                <h3>Uploaded Gallery Photos (등록된 사진 목록)</h3>
+                <h3>Uploaded Gallery Photos</h3>
                 {galleryItems.length === 0 ? (
-                  <div className="empty-state">등록된 갤러리 이미지가 없습니다. 훈련 모습을 업로드해 보세요.</div>
+                  <div className="empty-state">No gallery photos uploaded yet. Upload your first photo above.</div>
                 ) : (
                   <div className="admin-gallery-grid">
                     {galleryItems.map((item) => (
