@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { collection, addDoc, query, orderBy, getDocs, deleteDoc, doc, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { db, storage } from '../../firebase/config';
+import { db } from '../../firebase/config';
 import './Admin.css';
 
 interface Notice {
@@ -99,36 +98,69 @@ export default function AdminDashboard() {
     }
   };
 
-  // Upload Gallery Item
+  // 0원 무료 업로드를 위한 이미지 자동 리사이징 및 Base64 변환 헬퍼
+  const compressImageToBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const MAX_WIDTH = 1000; // 가로 최대 1000px로 웹 최적화 고화질 처리
+          let width = img.width;
+          let height = img.height;
+
+          if (width > MAX_WIDTH) {
+            height = Math.round((height * MAX_WIDTH) / width);
+            width = MAX_WIDTH;
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+
+          const ctx = canvas.getContext('2d');
+          if (!ctx) return resolve(event.target?.result as string);
+          ctx.drawImage(img, 0, 0, width, height);
+
+          // JPEG 0.82 품질로 0원 고화질 압축
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+          resolve(dataUrl);
+        };
+        img.onerror = (err) => reject(err);
+        img.src = event.target?.result as string;
+      };
+      reader.onerror = (err) => reject(err);
+      reader.readAsDataURL(file);
+    });
+  };
+
+  // Upload Gallery Item (100% Spark Free Engine)
   const handleUploadGallery = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!galleryTitle || !galleryFile) return;
 
     setLoadingGallery(true);
     try {
-      // 1. Upload file to Storage
-      const fileRef = ref(storage, `gallery/${Date.now()}_${galleryFile.name}`);
-      await uploadBytes(fileRef, galleryFile);
-      const downloadUrl = await getDownloadURL(fileRef);
+      // 1. Storage 및 카드 결제 필요 없음! 100% 무료 Base64 데이터로 자동 압축
+      const base64ImageUrl = await compressImageToBase64(galleryFile);
 
-      // 2. Save metadata to Firestore
+      // 2. 100% 무료 Firestore DB에 0원으로 이미지 데이터 직접 등록
       await addDoc(collection(db, 'gallery'), {
         title: galleryTitle,
-        imageUrl: downloadUrl,
+        imageUrl: base64ImageUrl,
         uploadedAt: serverTimestamp(),
       });
 
       setGalleryTitle('');
       setGalleryFile(null);
-      // Reset input element
       const fileInput = document.getElementById('gallery-file') as HTMLInputElement;
       if (fileInput) fileInput.value = '';
 
       await fetchGallery();
       alert('갤러리 이미지가 성공적으로 등록되었습니다.');
     } catch (err) {
-      console.error(err);
-      alert('이미지 업로드에 실패했습니다.');
+      console.error('Image processing error:', err);
+      alert('이미지 업로드 처리에 실패했습니다. 다시 시도해 주세요.');
     } finally {
       setLoadingGallery(false);
     }
