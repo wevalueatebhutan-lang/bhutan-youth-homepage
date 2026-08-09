@@ -179,7 +179,7 @@ export default function Layout({ children }: LayoutProps) {
               <h4>{t('footer.contactTitle')}</h4>
               <p style={{ margin: '0 0 6px' }}><strong>Bhutan Taekwondo Federation</strong></p>
               <p style={{ margin: '0 0 10px', fontSize: '0.88rem' }}>{t('footer.address')}</p>
-              <a href="mailto:info@bhutantaekwondo.org" className="footer-email">info@bhutantaekwondo.org</a>
+              <a href="mailto:wevalueatebhutan@gmail.com" className="footer-email">info@bhutantaekwondo.org</a>
             </div>
             <div className="footer-col">
               <h4>{t('footer.partnersTitle')}</h4>
