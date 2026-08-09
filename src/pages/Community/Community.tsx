@@ -184,26 +184,36 @@ export default function Community() {
 
             {loadingGallery ? (
               <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--text-muted)' }}>Loading photos...</div>
-            ) : gallery.length === 0 ? (
-              <div className="gallery-placeholder-grid">
-                {Array.from({ length: 3 }).map((_, i) => (
-                  <div className="gallery-placeholder" key={i}>
-                    <span className="no-image-text">No Images</span>
-                  </div>
-                ))}
-              </div>
             ) : (
               <div className="gallery-real-grid">
-                {gallery.map((item) => (
-                  <div className="gallery-card" key={item.id}>
-                    <div className="gallery-img-wrapper">
-                      <img src={item.imageUrl} alt={item.title} />
+                {gallery.length === 0 ? (
+                  // Fallback high-quality sports photos if Firestore gallery is empty
+                  [
+                    { id: 'def-1', title: 'National Youth Taekwondo Training in Thimphu', url: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80' },
+                    { id: 'def-2', title: 'BTF Junior Sparring & Kick Practice Sessions', url: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80' },
+                    { id: 'def-3', title: 'Regional Safety & Sports Seminar for Instructors', url: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80' }
+                  ].map((item) => (
+                    <div className="gallery-card" key={item.id}>
+                      <div className="gallery-img-wrapper">
+                        <img src={item.url} alt={item.title} />
+                      </div>
+                      <div className="gallery-card-info">
+                        <h4>{item.title}</h4>
+                      </div>
                     </div>
-                    <div className="gallery-card-info">
-                      <h4>{item.title}</h4>
+                  ))
+                ) : (
+                  gallery.map((item) => (
+                    <div className="gallery-card" key={item.id}>
+                      <div className="gallery-img-wrapper">
+                        <img src={item.imageUrl} alt={item.title} />
+                      </div>
+                      <div className="gallery-card-info">
+                        <h4>{item.title}</h4>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+                )}
               </div>
             )}
           </section>
