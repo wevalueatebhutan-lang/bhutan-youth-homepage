@@ -63,16 +63,16 @@
     "modalDetailsTitle": "Program Outline & Target",
     "close": "Close",
     "taekwondo": {
-      "title": "National School Taekwondo Spread",
-      "desc": "Regular dispatch of certified masters to schools and centers across Bhutan, offering free training and belt grading certification."
+      "title": "School Taekwondo Promotion Across 10 Dzongkhags",
+      "desc": "Operating in partnership with 10 Dzongkhag Taekwondo Associations (DTAs), deploying certified masters to local schools and community centers for free training and official grading."
     },
     "health": {
-      "title": "National & Demo Team Training",
-      "desc": "Elite training program for international competitions alongside the official demo team for cultural events."
+      "title": "Elite Athlete Development & International Games",
+      "desc": "Cooperating with the Bhutan Olympic Committee (BOC) to train national youth athletes, supporting their participation in events like the Asian Games and Asian Youth Games."
     },
     "value": {
-      "title": "Regional Instructor Seminars",
-      "desc": "Annual technical and safety workshops held in Thimphu for local regional coaches and youth leaders."
+      "title": "Sports Science Coaching Certificate Seminars",
+      "desc": "Conducting regular Sports Science Certificate Courses and technical safety workshops for regional coaches to build professional, secure local dojang infrastructure."
     }
   },
   "community": {
