@@ -17,7 +17,7 @@ export default function About() {
 
       <div className="container page-content">
         {/* 미션 및 비전 */}
-        <section className="content-section" style={{ textAlign: 'left' }}>
+        <section className="content-section reveal-fade" style={{ textAlign: 'left' }}>
           <div className="section-header-border">
             <h2>{t('about.visionTitle')}</h2>
           </div>
@@ -28,17 +28,17 @@ export default function About() {
 
         {/* 연맹의 4대 역사 단계 */}
         <section className="content-section" style={{ textAlign: 'left' }}>
-          <div className="section-header-border">
+          <div className="section-header-border reveal-fade">
             <h2>{t('about.historyTitle')}</h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
-              { num: '01', title: '1997', desc: t('about.historyStep1') },
-              { num: '02', title: '2000', desc: t('about.historyStep2') },
-              { num: '03', title: '2010', desc: t('about.historyStep3') },
-              { num: '04', title: '2023', desc: t('about.historyStep4') }
+              { num: '01', title: '1997', desc: t('about.historyStep1'), delay: 'reveal-fade reveal-delay-1' },
+              { num: '02', title: '2000', desc: t('about.historyStep2'), delay: 'reveal-fade reveal-delay-2' },
+              { num: '03', title: '2010', desc: t('about.historyStep3'), delay: 'reveal-fade reveal-delay-3' },
+              { num: '04', title: '2023', desc: t('about.historyStep4'), delay: 'reveal-fade reveal-delay-4' }
             ].map((step, idx) => (
-              <div key={idx} style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', background: 'var(--bg-sub)', padding: '20px', borderRadius: '4px', border: '1px solid var(--border)' }}>
+              <div key={idx} className={step.delay} style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', background: 'var(--bg-sub)', padding: '20px', borderRadius: '4px', border: '1px solid var(--border)' }}>
                 <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--accent)', lineHeight: 1 }}>{step.title}</span>
                 <div style={{ flex: '1' }}>
                   <p style={{ margin: 0, fontWeight: 700, fontSize: '0.92rem', color: '#0f172a' }}>{step.desc}</p>
@@ -49,7 +49,7 @@ export default function About() {
         </section>
 
         {/* 조직도 / 연맹 지부 정보 */}
-        <section className="content-section" style={{ textAlign: 'left', paddingBottom: '40px' }}>
+        <section className="content-section reveal-fade" style={{ textAlign: 'left', paddingBottom: '40px' }}>
           <div className="section-header-border">
             <h2>연맹 조직 및 지부 안내 (BTF Structure)</h2>
           </div>

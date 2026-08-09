@@ -44,7 +44,7 @@ export default function Project() {
 
         {/* ── TAB CONTENT 1: OVERVIEW (사업 개요) ── */}
         {activeTab === 'overview' && (
-          <section className="content-section" style={{ textAlign: 'left', marginTop: '24px' }}>
+          <section className="content-section reveal-fade" style={{ textAlign: 'left', marginTop: '24px' }}>
             <div className="section-header-border">
               <h2>{t('project.tabOverview')}</h2>
             </div>
@@ -66,7 +66,7 @@ export default function Project() {
 
         {/* ── TAB CONTENT 2: MILESTONES (사업 추진 현황) ── */}
         {activeTab === 'milestones' && (
-          <section className="content-section" style={{ textAlign: 'left', marginTop: '24px' }}>
+          <section className="content-section reveal-fade" style={{ textAlign: 'left', marginTop: '24px' }}>
             <div className="section-header-border">
               <h2>{t('project.tabMilestones')}</h2>
             </div>
@@ -96,7 +96,7 @@ export default function Project() {
 
         {/* ── TAB CONTENT 3: ICONIC CENTER (센터 건립 정보) ── */}
         {activeTab === 'center' && (
-          <section className="content-section" style={{ textAlign: 'left', marginTop: '24px' }}>
+          <section className="content-section reveal-fade" style={{ textAlign: 'left', marginTop: '24px' }}>
             <div className="section-header-border">
               <h2>{t('project.tabCenter')}</h2>
             </div>

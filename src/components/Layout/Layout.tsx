@@ -1,6 +1,6 @@
 import { Link, useLocation, Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Layout.css';
 
 interface LayoutProps {
@@ -11,6 +11,31 @@ export default function Layout({ children }: LayoutProps) {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Global Scroll Reveal (찬찬찬 애니메이션 트리거)
+  useEffect(() => {
+    const handleReveal = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 } // 15% 이상 보일 때 발동
+      );
+
+      const elements = document.querySelectorAll('.reveal-fade');
+      elements.forEach((el) => observer.observe(el));
+
+      return () => observer.disconnect();
+    };
+
+    // DOM이 완전히 업데이트될 시간을 약간 준 뒤 옵저버 바인딩
+    const timer = setTimeout(handleReveal, 100);
+    return () => clearTimeout(timer);
+  }, [location.pathname]); // 페이지 이동 시마다 재장착
 
   const toggleLanguage = () => {
     const nextLang = i18n.language === 'ko' ? 'en' : 'ko';

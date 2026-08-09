@@ -61,8 +61,12 @@ export default function Programs() {
         <section className="content-section" style={{ paddingBottom: '40px' }}>
           <h2 className="program-category-title">핵심 교육 보급 사업 (BTF Core Programs)</h2>
           <div className="programs-grid" style={{ marginTop: '24px' }}>
-            {programsData.map((p) => (
-              <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
+            {programsData.map((p, idx) => (
+              <div 
+                className={`program-card reveal-fade reveal-delay-${idx + 1}`} 
+                key={p.id} 
+                onClick={() => setSelectedProgram(p)}
+              >
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <span className="program-card-action">수련 안내 보기 →</span>

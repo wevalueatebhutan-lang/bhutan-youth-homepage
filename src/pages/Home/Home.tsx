@@ -63,34 +63,20 @@ export default function Home() {
       <section className="portal-quick-grid-section">
         <div className="container">
           <div className="quick-grid">
-            <a href="/programs" className="quick-card card-blue">
-              <div className="quick-card-body">
-                <h3>{t('home.quickAccess.manualsTitle')}</h3>
-                <p>{t('home.quickAccess.manualsDesc')}</p>
-                <span className="quick-card-more">More →</span>
-              </div>
-            </a>
-            <a href="/iconic-center" className="quick-card card-emerald">
-              <div className="quick-card-body">
-                <h3>{t('home.quickAccess.centerTitle')}</h3>
-                <p>{t('home.quickAccess.centerDesc')}</p>
-                <span className="quick-card-more">More →</span>
-              </div>
-            </a>
-            <a href="/programs" className="quick-card card-purple">
-              <div className="quick-card-body">
-                <h3>{t('programs.badge')}</h3>
-                <p>가치 보건 교육 교재 다운로드</p>
-                <span className="quick-card-more">More →</span>
-              </div>
-            </a>
-            <a href="/community" className="quick-card card-orange">
-              <div className="quick-card-body">
-                <h3>{t('home.quickAccess.newsTitle')}</h3>
-                <p>{t('home.quickAccess.newsDesc')}</p>
-                <span className="quick-card-more">More →</span>
-              </div>
-            </a>
+            {[
+              { href: '/programs', className: 'quick-card card-blue reveal-fade reveal-delay-1', title: t('home.quickAccess.manualsTitle'), desc: t('home.quickAccess.manualsDesc') },
+              { href: '/project', className: 'quick-card card-emerald reveal-fade reveal-delay-2', title: t('home.quickAccess.centerTitle'), desc: t('home.quickAccess.centerDesc') },
+              { href: '/programs', className: 'quick-card card-purple reveal-fade reveal-delay-3', title: t('programs.badge'), desc: '가치 보건 교육 교재 다운로드' },
+              { href: '/community', className: 'quick-card card-orange reveal-fade reveal-delay-4', title: t('home.quickAccess.newsTitle'), desc: t('home.quickAccess.newsDesc') }
+            ].map((item, idx) => (
+              <a href={item.href} className={item.className} key={idx}>
+                <div className="quick-card-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                  <span className="quick-card-more">More →</span>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -99,7 +85,7 @@ export default function Home() {
       <section className="portal-dashboard-section">
         <div className="container dashboard-grid">
           {/* Left Column: Board Notices */}
-          <div className="dashboard-board-card">
+          <div className="dashboard-board-card reveal-fade">
             <div className="dashboard-card-header">
               <h2>{t('community.sectionNotice')}</h2>
               <a href="/community" className="more-view-link">전체보기 +</a>
@@ -132,7 +118,7 @@ export default function Home() {
           </div>
 
           {/* Right Column: Facebook Feed */}
-          <div className="dashboard-sns-card">
+          <div className="dashboard-sns-card reveal-fade reveal-delay-2">
             <div className="dashboard-card-header">
               <h2>{t('community.sectionFacebook')}</h2>
               <a href="https://www.facebook.com/bhutantaekwondo/?locale=ko_KR" target="_blank" rel="noreferrer" className="more-view-link">Facebook Page →</a>
