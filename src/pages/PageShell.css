@@ -316,6 +316,61 @@
   margin-top: 8px;
 }
 
+/* ── HOVER SLIDE IN-CARD DETAILS ── */
+.program-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.program-details-hover {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin-top 0.3s, padding-top 0.3s;
+  border-top: 1px dashed transparent;
+  text-align: left;
+}
+
+.program-card:hover .program-details-hover {
+  max-height: 350px;
+  opacity: 1;
+  border-top-color: var(--border);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.program-details-hover h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.program-details-hover ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.program-details-hover li {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 12px;
+}
+
+.program-details-hover li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
 /* ── MODAL POPUP ── */
 .modal-overlay {
   position: fixed;

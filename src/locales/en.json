@@ -59,20 +59,35 @@
     "badge": "Activities",
     "title": "Core Federation Programs",
     "subtitle": "Key training and development programs run by BTF nationwide.",
-    "viewDetails": "View Details",
+    "viewDetails": "Program Outline & Target",
     "modalDetailsTitle": "Program Outline & Target",
     "close": "Close",
     "taekwondo": {
       "title": "School Taekwondo Promotion Across 10 Dzongkhags",
-      "desc": "Operating in partnership with 10 Dzongkhag Taekwondo Associations (DTAs), deploying certified masters to local schools and community centers for free training and official grading."
+      "desc": "Operating in partnership with 10 Dzongkhag Taekwondo Associations (DTAs), deploying certified masters to local schools and community centers for free training and official grading.",
+      "details": [
+        "Scope: Public schools under 10 Dzongkhag Taekwondo Associations (DTA)",
+        "Benefits: Deploying certified masters for free training and donating equipment",
+        "Assessment: Hosting terminal belt promotional tests and awarding scholarships"
+      ]
     },
     "health": {
       "title": "Elite Athlete Development & International Games",
-      "desc": "Cooperating with the Bhutan Olympic Committee (BOC) to train national youth athletes, supporting their participation in events like the Asian Games and Asian Youth Games."
+      "desc": "Cooperating with the Bhutan Olympic Committee (BOC) to train national youth athletes, supporting their participation in events like the Asian Games and Asian Youth Games.",
+      "details": [
+        "Training: Regular training applying BOC athletic performance evaluation models",
+        "Key Goal: Securing medals in official international championships hosted by the Olympic Committee",
+        "Outreach: Participating in Royal celebrations and dispatching teams for global exchanges"
+      ]
     },
     "value": {
       "title": "Sports Science Coaching Certificate Seminars",
-      "desc": "Conducting regular Sports Science Certificate Courses and technical safety workshops for regional coaches to build professional, secure local dojang infrastructure."
+      "desc": "Conducting regular Sports Science Certificate Courses and technical safety workshops for regional coaches to build professional, secure local dojang infrastructure.",
+      "details": [
+        "Subjects: Sports Science Course, first aid injury prevention, youth sports safety",
+        "Target: Active coaching masters and candidate junior assistants in DTAs",
+        "Expected Outcome: Obtaining international standards for coaching credentials and local dojang safety"
+      ]
     }
   },
   "community": {
