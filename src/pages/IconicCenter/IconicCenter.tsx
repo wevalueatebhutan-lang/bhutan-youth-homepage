@@ -22,7 +22,7 @@ export default function IconicCenter() {
             <h2>{t('center.sectionOverview')}</h2>
           </div>
           <p style={{ lineHeight: '1.7', color: '#334155', fontSize: '0.98rem' }}>
-            부탄 팀푸(Thimphu)에 조성 중인 **아이코닉 센터 (Iconic Center)**는 한국국제협력단(KOICA)과 부탄태권도연맹(BTF)의 긴밀한 글로벌 ODA 협정 하에 건립 중인 부탄 최초의 **청소년 다목적 체육 교육관**입니다. 청소년들이 태권도 수련과 보건위생 교육, 공동체 가치 학습을 결합해 건강한 사회 구성원으로 성장할 수 있는 핵심 인프라 역할을 담당합니다.
+            부탄 팀푸(Thimphu)에 조성 중인 <strong>아이코닉 센터 (Iconic Center)</strong>는 한국국제협력단(KOICA)과 부탄태권도연맹(BTF)의 긴밀한 글로벌 ODA 협정 하에 건립 중인 부탄 최초의 <strong>청소년 다목적 체육 교육관</strong>입니다. 청소년들이 태권도 수련과 보건위생 교육, 공동체 가치 학습을 결합해 건강한 사회 구성원으로 성장할 수 있는 핵심 인프라 역할을 담당합니다.
           </p>
         </section>
 
