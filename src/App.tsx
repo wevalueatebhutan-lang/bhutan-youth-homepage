@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -20,6 +20,8 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/community" element={<Community />} />
+          {/* Automatic redirect for old path to new integrated ODA project page */}
+          <Route path="/iconic-center" element={<Navigate to="/project" replace />} />
         </Route>
 
         {/* Admin routes */}
