@@ -1,21 +1,20 @@
-import { useState, useEffect } from 'react';
-import { Outlet, Link, NavLink } from 'react-router-dom';
+import { Link, useLocation, Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import './Layout.css';
 
-export default function Layout() {
+interface LayoutProps {
+  children?: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   const { t, i18n } = useTranslation();
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === 'ko' ? 'en' : 'ko';
+    i18n.changeLanguage(nextLang);
   };
 
   const navLinks = [
@@ -27,113 +26,144 @@ export default function Layout() {
   ];
 
   return (
-    <div className="site-wrapper">
-      {/* ── HEADER ── */}
-      <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
-        <div className="header-inner container">
-          <Link to="/" className="site-logo" aria-label="Bhutan Youth Development Home">
-            <div className="logo-text">
-              <strong>Bhutan Youth</strong>
-              <span>Development Project</span>
+    <div className="layout-wrapper">
+      {/* ── UPPER UTILITY BAR ── */}
+      <div className="utility-bar">
+        <div className="container utility-inner">
+          <span className="gov-badge">
+            🇧🇹 Official Portal of Bhutan Youth Development Project
+          </span>
+          <div className="utility-right">
+            {/* Language Switcher */}
+            <button className="lang-switcher-btn" onClick={toggleLanguage}>
+              🌐 {i18n.language === 'ko' ? 'English (EN)' : '한국어 (KR)'}
+            </button>
+            <span className="divider">|</span>
+            <Link to="/admin/login" className="admin-login-link">Admin Login</Link>
+          </div>
+        </div>
+      </div>
+
+      {/* ── GNB MAIN HEADER ── */}
+      <header className="main-header">
+        <div className="container header-inner">
+          <Link to="/" className="brand-logo">
+            <span className="brand-logo-symbol">🥋</span>
+            <div className="brand-text">
+              <strong>BHUTAN TAEKWONDO FEDERATION</strong>
+              <span>Youth Development Project Portal</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="main-nav" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                end={link.path === '/'}
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              >
-                {link.label}
-              </NavLink>
-            ))}
+          <nav className="desktop-nav">
+            <ul>
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <li key={link.path}>
+                    <Link to={link.path} className={isActive ? 'active' : ''}>
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </nav>
 
-          {/* Language Switcher & Hamburger */}
-          <div className="header-actions">
-            <div className="lang-switcher">
-              <button
-                className={`lang-btn ${i18n.language === 'ko' ? 'active' : ''}`}
-                onClick={() => changeLanguage('ko')}
-              >
-                KR
-              </button>
-              <span className="lang-divider">|</span>
-              <button
-                className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
-                onClick={() => changeLanguage('en')}
-              >
-                EN
-              </button>
-            </div>
-
-            <button
-              className={`hamburger ${menuOpen ? 'open' : ''}`}
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-label="Toggle menu"
-              aria-expanded={menuOpen}
-            >
-              <span /><span /><span />
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Drawer */}
-        <div className={`mobile-drawer ${menuOpen ? 'open' : ''}`}>
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              end={link.path === '/'}
-              className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </NavLink>
-          ))}
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="mobile-menu-toggle" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <div className={`bar ${mobileMenuOpen ? 'open' : ''}`} />
+            <div className={`bar ${mobileMenuOpen ? 'open' : ''}`} />
+            <div className={`bar ${mobileMenuOpen ? 'open' : ''}`} />
+          </button>
         </div>
       </header>
 
-      {/* ── PAGE CONTENT ── */}
-      <main className="site-main">
-        <Outlet />
-      </main>
-
-      {/* ── FOOTER ── */}
-      <footer className="site-footer">
-        <div className="footer-inner container">
-          <div className="footer-brand">
-            <div>
-              <strong>Bhutan Youth Development Project</strong>
-              <p>{t('footer.support')}</p>
+      {/* Mobile Drawer Menu */}
+      {mobileMenuOpen && (
+        <div className="mobile-drawer" onClick={() => setMobileMenuOpen(false)}>
+          <div className="drawer-content" onClick={(e) => e.stopPropagation()}>
+            <div className="drawer-header">
+              <strong>Menu</strong>
+              <button className="close-btn" onClick={() => setMobileMenuOpen(false)}>×</button>
             </div>
-          </div>
-          <div className="footer-links">
-            <div className="footer-col">
-              <h4>{t('footer.navTitle')}</h4>
-              {navLinks.map((link) => (
-                <Link key={link.path} to={link.path}>{link.label}</Link>
-              ))}
-            </div>
-            <div className="footer-col">
-              <h4>{t('footer.contactTitle')}</h4>
-              <p>Bhutan Taekwondo Federation</p>
-              <p>{t('footer.address')}</p>
-              <a href="mailto:info@bhutantaekwondo.org">info@bhutantaekwondo.org</a>
-            </div>
-            <div className="footer-col">
-              <h4>{t('footer.partnersTitle')}</h4>
-              <p>KOICA</p>
-              <p>Bhutan Taekwondo Federation</p>
+            <nav className="drawer-nav">
+              <ul>
+                {navLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link 
+                      to={link.path} 
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={location.pathname === link.path ? 'active' : ''}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="drawer-footer">
+              <button className="lang-switcher-btn-m" onClick={toggleLanguage}>
+                🌐 {i18n.language === 'ko' ? 'English (EN)' : '한국어 (KR)'}
+              </button>
             </div>
           </div>
         </div>
-        <div className="footer-bottom">
-          <span>© 2025 Bhutan Youth Development Project. All rights reserved.</span>
-          <Link to="/admin/login" className="admin-link">Admin</Link>
+      )}
+
+      {/* ── MAIN BODY ── */}
+      <main className="main-content-area">
+        {children || <Outlet />}
+      </main>
+
+      {/* ── SITE FOOTER ── */}
+      <footer className="site-footer">
+        <div className="container footer-inner">
+          <div className="footer-top-row">
+            <div className="footer-logo">
+              <strong>🥋 BTF × KOICA</strong>
+              <p>{t('footer.support')}</p>
+            </div>
+            <div className="footer-sns">
+              <a href="https://www.facebook.com/bhutantaekwondo/?locale=ko_KR" target="_blank" rel="noreferrer" className="sns-circle">
+                FB
+              </a>
+            </div>
+          </div>
+
+          <div className="footer-grid">
+            <div className="footer-col">
+              <h4>{t('footer.navTitle')}</h4>
+              <ul>
+                {navLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link to={link.path}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>{t('footer.contactTitle')}</h4>
+              <p style={{ margin: '0 0 6px' }}><strong>Bhutan Taekwondo Federation</strong></p>
+              <p style={{ margin: '0 0 10px', fontSize: '0.88rem' }}>{t('footer.address')}</p>
+              <a href="mailto:info@bhutantaekwondo.org" className="footer-email">info@bhutantaekwondo.org</a>
+            </div>
+            <div className="footer-col">
+              <h4>{t('footer.partnersTitle')}</h4>
+              <p>Korea International Cooperation Agency (KOICA)</p>
+              <p>Bhutan Taekwondo Federation (BTF)</p>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>© 2025 Bhutan Taekwondo Federation. All rights reserved.</p>
+            <Link to="/admin/login" className="admin-link">System Admin Login</Link>
+          </div>
         </div>
       </footer>
     </div>
