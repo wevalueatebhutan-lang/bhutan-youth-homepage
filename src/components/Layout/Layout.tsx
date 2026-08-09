@@ -129,9 +129,12 @@ export default function Layout({ children }: LayoutProps) {
               <strong>BTF × KOICA</strong>
               <p>{t('footer.support')}</p>
             </div>
-            <div className="footer-sns">
-              <a href="https://www.facebook.com/bhutantaekwondo/?locale=ko_KR" target="_blank" rel="noreferrer" className="sns-circle">
+            <div className="footer-sns" style={{ display: 'flex', gap: '12px' }}>
+              <a href="https://www.facebook.com/bhutantaekwondo/?locale=ko_KR" target="_blank" rel="noreferrer" className="sns-circle" title="Facebook">
                 FB
+              </a>
+              <a href="https://www.instagram.com/bhutantaekwondo/" target="_blank" rel="noreferrer" className="sns-circle" style={{ backgroundColor: '#E1306C' }} title="Instagram">
+                IG
               </a>
             </div>
           </div>
