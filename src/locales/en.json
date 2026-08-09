@@ -7,29 +7,37 @@
     "community": "Community"
   },
   "home": {
-    "heroBadge": "KOICA × Bhutan Taekwondo Federation",
+    "heroBadge": "KOICA × BTF Youth Development Project",
     "heroTitleLine1": "Empowering Bhutanese Youth",
-    "heroTitleLine2": "Through Sport, Health & Values",
-    "heroSubtitle": "An integrated training program of Taekwondo, Health, and Value-based character education for youth across 10 Dzongkhags in Bhutan — building a brighter future together.",
-    "exploreBtn": "Explore Programs",
-    "iconicBtn": "About Iconic Center",
+    "heroTitleLine2": "Through Sports and Value Education",
+    "heroSubtitle": "Welcome to the official portal for youth physical training, global health, and value education in Bhutan.",
+    "exploreBtn": "Explore Youth Programs",
+    "iconicBtn": "Iconic Center Facility",
     "stats": {
-      "graduates": "Youth Graduates",
+      "graduates": "Trained Youth",
       "centers": "Schools & Centers",
       "regions": "Target Regions",
-      "satisfaction": "Satisfaction Score"
+      "satisfaction": "Satisfaction Rate"
     },
     "quickAccess": {
-      "title": "Quick Access",
-      "manualsTitle": "Download Manuals",
-      "manualsDesc": "Access our 4 core education manuals (Taekwondo, Health, Value, Mental Health)",
+      "title": "Quick Services",
+      "manualsTitle": "Youth Programs",
+      "manualsDesc": "Taekwondo, Health, and Value Education manuals and curricula",
       "centerTitle": "Iconic Center",
-      "centerDesc": "Learn about the multi-purpose youth facility under construction in Thimphu",
-      "newsTitle": "Latest News",
-      "newsDesc": "Get real-time updates of our programs and construction progress",
+      "centerDesc": "Construction updates and layouts of the Thimphu multi-purpose gym",
+      "newsTitle": "News & Notice",
+      "newsDesc": "Official announcements, press releases, and active updates",
       "aboutTitle": "About Project",
-      "aboutDesc": "Discover our project goals, milestone history, and international partners"
+      "aboutDesc": "Project background, objectives, and partnership roadmap"
     }
+  },
+  "center": {
+    "badge": "Facility Info",
+    "title": "Thimphu Iconic Center",
+    "subtitle": "Introducing the multi-purpose youth sports and educational facility being built in Thimphu, Bhutan.",
+    "sectionOverview": "Iconic Center Overview",
+    "sectionConstruction": "Construction Status",
+    "sectionDocs": "Facility Rental Rules & Forms"
   },
   "about": {
     "badge": "About Project",

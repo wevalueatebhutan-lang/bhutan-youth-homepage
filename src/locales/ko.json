@@ -7,29 +7,37 @@
     "community": "알림마당"
   },
   "home": {
-    "heroBadge": "KOICA × 부탄태권도연맹",
-    "heroTitleLine1": "스포츠, 보건 및 가치교육을 통한",
-    "heroTitleLine2": "부탄 청소년 역량 강화",
-    "heroSubtitle": "부탄 10개 종카(Dzongkhag) 전역의 청소년들을 위한 태권도, 보건, 가치 인성 교육 통합 프로그램 — 더 밝은 미래를 함께 만들어갑니다.",
-    "exploreBtn": "프로그램 탐색",
-    "iconicBtn": "아이코닉 센터 안내",
+    "heroBadge": "KOICA × BTF 청소년 개발 프로젝트",
+    "heroTitleLine1": "태권도를 통한 청소년 성장과",
+    "heroTitleLine2": "더 건강하고 올바른 가치 함양",
+    "heroSubtitle": "부탄 청소년들의 건강한 신체 단련 및 글로벌 보건·인성 교육 포털에 오신 것을 환영합니다.",
+    "exploreBtn": "청소년 활동 탐색",
+    "iconicBtn": "아이코닉 센터 소개",
     "stats": {
-      "graduates": "수료 청소년 수",
-      "centers": "참여 학교 및 센터",
-      "regions": "지원 대상 지역",
-      "satisfaction": "교육 만족도 점수"
+      "graduates": "시범 교육 수료생",
+      "centers": "운영 학교 및 센터",
+      "regions": "교육 대상 지역",
+      "satisfaction": "시범 프로그램 만족도"
     },
     "quickAccess": {
-      "title": "빠른 바로가기",
-      "manualsTitle": "교육 매뉴얼 다운로드",
-      "manualsDesc": "태권도, 보건, 가치교육, 정신건강 4대 핵심 매뉴얼 아카이브",
+      "title": "주요 서비스 바로가기",
+      "manualsTitle": "청소년 활동 안내",
+      "manualsDesc": "태권도, 보건, 인성 가치 교육 교재 및 매뉴얼 안내",
       "centerTitle": "아이코닉 센터",
-      "centerDesc": "팀푸에 건립 중인 부탄 청소년 전용 복합 시설 안내",
-      "newsTitle": "최신 소식",
-      "newsDesc": "프로그램 운영 및 공사 현장 소식통",
+      "centerDesc": "부탄 팀푸 청소년 다목적 체육관 건립 및 공정률 안내",
+      "newsTitle": "알림 · 소식",
+      "newsDesc": "연맹의 최신 보도자료, 공지사항 및 페이스북 타임라인",
       "aboutTitle": "사업 소개",
-      "aboutDesc": "사업 목적, 추진 연혁 및 주요 협력 파트너 소개"
+      "aboutDesc": "프로젝트 개요, 주요 추진 목적 및 로드맵 정보"
     }
+  },
+  "center": {
+    "badge": "시설 소개",
+    "title": "Thimphu 아이코닉 센터",
+    "subtitle": "부탄 팀푸에 건립 중인 청소년 복합 교육 체육 시설(Youth Center)을 소개합니다.",
+    "sectionOverview": "아이코닉 센터 개요",
+    "sectionConstruction": "건축 및 공사 현황",
+    "sectionDocs": "대관 규정 및 관련 서식"
   },
   "about": {
     "badge": "사업 소개",
