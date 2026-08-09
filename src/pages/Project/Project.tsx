@@ -44,7 +44,7 @@ export default function Project() {
 
         {/* ── TAB CONTENT 1: OVERVIEW (사업 개요) ── */}
         {activeTab === 'overview' && (
-          <section className="content-section reveal-fade" style={{ textAlign: 'left', marginTop: '24px' }}>
+          <section className="content-section" style={{ textAlign: 'left', marginTop: '24px' }}>
             <div className="section-header-border">
               <h2>{t('project.tabOverview')}</h2>
             </div>
@@ -66,7 +66,7 @@ export default function Project() {
 
         {/* ── TAB CONTENT 2: MILESTONES (사업 추진 현황) ── */}
         {activeTab === 'milestones' && (
-          <section className="content-section reveal-fade" style={{ textAlign: 'left', marginTop: '24px' }}>
+          <section className="content-section" style={{ textAlign: 'left', marginTop: '24px' }}>
             <div className="section-header-border">
               <h2>{t('project.tabMilestones')}</h2>
             </div>
@@ -96,7 +96,7 @@ export default function Project() {
 
         {/* ── TAB CONTENT 3: ICONIC CENTER (센터 건립 정보) ── */}
         {activeTab === 'center' && (
-          <section className="content-section reveal-fade" style={{ textAlign: 'left', marginTop: '24px' }}>
+          <section className="content-section" style={{ textAlign: 'left', marginTop: '24px' }}>
             <div className="section-header-border">
               <h2>{t('project.tabCenter')}</h2>
             </div>
@@ -158,27 +158,10 @@ export default function Project() {
                     <td style={{ fontWeight: 700, color: 'var(--accent)' }}>1층 (1F)</td>
                     <td style={{ fontWeight: 600 }}>국제 규격 태권도 경기장 및 대강당 (도장)</td>
                     <td>약 450 ㎡</td>
-                    <td>공식 태권도 승급 심사, 전국 대회 개최 및 청소년 문화 행사</td>
+                    <td>국제 규격 경기 연출, 청소년 대규모 가치 훈련 및 합동 심사</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-
-            {/* Construction Progress */}
-            <div className="progress-banner" style={{ background: 'var(--bg-sub)', border: '1px solid var(--border)', borderRadius: '4px', padding: '24px', display: 'flex', alignItems: 'center', gap: '24px' }}>
-              <div className="progress-circle-badge" style={{ flex: '0 0 80px', height: '80px', borderRadius: '4px', background: 'var(--accent)', color: '#ffffff', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>
-                <span style={{ fontSize: '0.7rem', opacity: 0.9 }}>공정률</span>
-                <span style={{ fontSize: '1.3rem' }}>65%</span>
-              </div>
-              <div className="progress-info-box" style={{ flex: '1' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '0.9rem', fontWeight: 700 }}>
-                  <span>골조 공사 완료 및 내·외장재 시공 중</span>
-                  <span style={{ color: 'var(--accent)' }}>Target: 2026.12</span>
-                </div>
-                <div className="progress-bar-bg" style={{ width: '100%', height: '12px', background: '#e2e8f0', borderRadius: '99px', overflow: 'hidden' }}>
-                  <div className="progress-bar-active" style={{ width: '65%', height: '100%', background: 'var(--accent-mint)', borderRadius: '99px' }} />
-                </div>
-              </div>
             </div>
           </section>
         )}
