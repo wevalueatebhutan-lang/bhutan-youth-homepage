@@ -257,8 +257,6 @@ export default function Community() {
                       display: 'inline-flex', 
                       alignItems: 'center', 
                       gap: '10px', 
-                      backgroundColor: '#1877F2', 
-                      borderColor: '#1877F2',
                       padding: '12px 24px',
                       fontWeight: 700
                     }}
@@ -277,8 +275,6 @@ export default function Community() {
                       display: 'inline-flex', 
                       alignItems: 'center', 
                       gap: '10px', 
-                      borderColor: '#E1306C',
-                      color: '#E1306C',
                       padding: '12px 24px',
                       fontWeight: 700
                     }}
