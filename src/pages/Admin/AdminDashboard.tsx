@@ -180,16 +180,25 @@ export default function AdminDashboard() {
             📸 Gallery Management
           </button>
         </nav>
-        
-        <button onClick={handleLogout} className="admin-logout-btn">
-          Sign Out / Exit
-        </button>
       </div>
 
       {/* Main Area */}
       <div className="admin-main">
-        <div className="admin-topbar">
-          <h2>{activeTab === 'notices' ? 'Notices Management' : 'Gallery Management'}</h2>
+        <div className="admin-topbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <h2 style={{ margin: 0 }}>{activeTab === 'notices' ? 'Notices Management' : 'Gallery Management'}</h2>
+          <button 
+            onClick={handleLogout} 
+            className="btn-delete-sm" 
+            style={{ 
+              padding: '8px 16px', 
+              fontSize: '0.85rem',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.02em'
+            }}
+          >
+            🚪 Sign Out
+          </button>
         </div>
 
         <div className="admin-content">
