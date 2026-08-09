@@ -48,6 +48,7 @@ export default function Layout({ children }: LayoutProps) {
       <header className="main-header">
         <div className="container header-inner">
           <Link to="/" className="brand-logo">
+            <img src="/logo.png" alt="Bhutan Taekwondo Federation Logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
             <div className="brand-text">
               <strong>BHUTAN TAEKWONDO FEDERATION</strong>
               <span>Youth Development Project Portal</span>
