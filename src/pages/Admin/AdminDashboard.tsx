@@ -165,175 +165,206 @@ export default function AdminDashboard() {
     <div className="admin-dashboard">
       {/* Sidebar */}
       <div className="admin-sidebar">
-        <div className="admin-brand">🥋 BTF Admin</div>
+        <div className="admin-brand">🥋 BTF Portal Admin</div>
         <nav className="admin-nav">
           <button
             className={`admin-nav-btn ${activeTab === 'notices' ? 'active' : ''}`}
             onClick={() => setActiveTab('notices')}
           >
-            📢 Notices
+            📢 Notices Management
           </button>
           <button
             className={`admin-nav-btn ${activeTab === 'gallery' ? 'active' : ''}`}
             onClick={() => setActiveTab('gallery')}
           >
-            📸 Gallery
+            📸 Gallery Management
           </button>
         </nav>
-        <button className="admin-logout-btn" onClick={handleLogout}>Sign Out</button>
+        
+        <button onClick={handleLogout} className="admin-logout-btn">
+          Sign Out / Exit
+        </button>
       </div>
 
-      {/* Main Content */}
+      {/* Main Area */}
       <div className="admin-main">
         <div className="admin-topbar">
           <h2>{activeTab === 'notices' ? 'Notices Management' : 'Gallery Management'}</h2>
         </div>
 
         <div className="admin-content">
-          {activeTab === 'notices' ? (
+          {/* TAB 1: NOTICES */}
+          {activeTab === 'notices' && (
             <>
-              {/* Notice Form */}
+              {/* Publish Form */}
               <div className="admin-card">
                 <h3>Publish New Notice (공지사항 등록)</h3>
                 <form onSubmit={handlePublishNotice} className="admin-form">
-                  <div className="form-group">
-                    <label>Title (제목)</label>
-                    <input
-                      type="text"
-                      value={noticeTitle}
-                      onChange={(e) => setNoticeTitle(e.target.value)}
-                      placeholder="공지 제목을 입력하세요..."
-                      required
-                    />
+                  <div className="form-row">
+                    <div className="admin-form-group">
+                      <label>TITLE (제목)</label>
+                      <input
+                        type="text"
+                        placeholder="공지 제목을 입력하세요..."
+                        value={noticeTitle}
+                        onChange={(e) => setNoticeTitle(e.target.value)}
+                        disabled={loadingNotice}
+                        required
+                      />
+                    </div>
+                    <div className="admin-form-group" style={{ maxWidth: '280px' }}>
+                      <label>CATEGORY TAG (태그 분류)</label>
+                      <select
+                        value={noticeTag}
+                        onChange={(e) => setNoticeTag(e.target.value)}
+                        disabled={loadingNotice}
+                      >
+                        <option value="update">공사 현황 (Construction)</option>
+                        <option value="event">행사/뉴스 (Events & News)</option>
+                        <option value="report">ODA 보고서 (ODA Report)</option>
+                      </select>
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <label>Content (내용)</label>
+
+                  <div className="admin-form-group">
+                    <label>CONTENT (내용)</label>
                     <textarea
-                      rows={4}
+                      placeholder="공지할 상세 내용을 입력하세요..."
                       value={noticeContent}
                       onChange={(e) => setNoticeContent(e.target.value)}
-                      placeholder="내용을 입력하세요..."
+                      disabled={loadingNotice}
                       required
                     />
                   </div>
-                  <div className="form-group">
-                    <label>Category Tag (태그 분류)</label>
-                    <select value={noticeTag} onChange={(e) => setNoticeTag(e.target.value)}>
-                      <option value="update">공사 현황</option>
-                      <option value="event">행사/연수</option>
-                      <option value="report">연차 보고서</option>
-                    </select>
+
+                  <div style={{ textAlign: 'right' }}>
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      disabled={loadingNotice}
+                      style={{ padding: '12px 32px', fontWeight: 700 }}
+                    >
+                      {loadingNotice ? 'Publishing...' : '📢 Publish Notice'}
+                    </button>
                   </div>
-                  <button type="submit" className="btn btn-primary" disabled={loadingNotice}>
-                    {loadingNotice ? 'Publishing...' : 'Publish'}
-                  </button>
                 </form>
               </div>
 
               {/* Notice List */}
               <div className="admin-card">
                 <h3>Published Notices (등록된 공지사항 목록)</h3>
-                <div style={{ marginTop: '16px' }}>
-                  {notices.map((n) => (
-                    <div
-                      key={n.id}
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        paddingBlock: '12px',
-                        borderBottom: '1px solid var(--color-border)',
-                      }}
-                    >
-                      <div>
-                        <strong style={{ fontSize: '0.95rem' }}>{n.title}</strong>
-                        <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginLeft: '12px' }}>
-                          {n.date} | {n.tag}
-                        </span>
-                      </div>
-                      <button
-                        onClick={() => handleDeleteNotice(n.id)}
-                        style={{
-                          background: 'rgba(231,76,60,0.1)',
-                          border: 'none',
-                          color: '#e74c3c',
-                          padding: '6px 12px',
-                          borderRadius: '4px',
-                          cursor: 'pointer',
-                        }}
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  ))}
-                </div>
+                {notices.length === 0 ? (
+                  <div className="empty-state">등록된 공지사항이 없습니다. 새로운 소식을 발행해 보세요.</div>
+                ) : (
+                  <div className="admin-table-container">
+                    <table className="admin-table">
+                      <thead>
+                        <tr>
+                          <th style={{ width: '120px' }}>Date</th>
+                          <th style={{ width: '120px' }}>Category</th>
+                          <th>Title</th>
+                          <th style={{ width: '100px', textAlign: 'center' }}>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {notices.map((n) => (
+                          <tr key={n.id}>
+                            <td style={{ color: '#64748b', fontWeight: 600 }}>{n.date}</td>
+                            <td>
+                              <span className={`tag-badge ${n.tag === '공사' ? 'update' : n.tag === '행사' ? 'event' : 'report'}`}>
+                                {n.tag}
+                              </span>
+                            </td>
+                            <td style={{ fontWeight: 700 }}>{n.title}</td>
+                            <td style={{ textAlign: 'center' }}>
+                              <button
+                                onClick={() => handleDeleteNotice(n.id)}
+                                className="btn-delete-sm"
+                              >
+                                Delete
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
             </>
-          ) : (
+          )}
+
+          {/* TAB 2: GALLERY */}
+          {activeTab === 'gallery' && (
             <>
-              {/* Gallery Form */}
+              {/* Upload Form */}
               <div className="admin-card">
                 <h3>Upload New Gallery Photo (사진첩 등록)</h3>
                 <form onSubmit={handleUploadGallery} className="admin-form">
-                  <div className="form-group">
-                    <label>Title / Caption (사진 설명)</label>
-                    <input
-                      type="text"
-                      value={galleryTitle}
-                      onChange={(e) => setGalleryTitle(e.target.value)}
-                      placeholder="사진의 설명을 적어주세요..."
-                      required
-                    />
+                  <div className="form-row">
+                    <div className="admin-form-group">
+                      <label>TITLE / CAPTION (사진 설명)</label>
+                      <input
+                        type="text"
+                        placeholder="사진에 대한 한 줄 설명을 적어주세요..."
+                        value={galleryTitle}
+                        onChange={(e) => setGalleryTitle(e.target.value)}
+                        disabled={loadingGallery}
+                        required
+                      />
+                    </div>
+                    <div className="admin-form-group">
+                      <label>IMAGE FILE (이미지 파일)</label>
+                      <input
+                        id="gallery-file"
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => setGalleryFile(e.target.files ? e.target.files[0] : null)}
+                        disabled={loadingGallery}
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <label>Image File (이미지 파일)</label>
-                    <input
-                      id="gallery-file"
-                      type="file"
-                      accept="image/*"
-                      onChange={(e) => {
-                        if (e.target.files && e.target.files.length > 0) {
-                          setGalleryFile(e.target.files[0]);
-                        }
-                      }}
-                      required
-                    />
+
+                  <div style={{ textAlign: 'right' }}>
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      disabled={loadingGallery}
+                      style={{ padding: '12px 32px', fontWeight: 700 }}
+                    >
+                      {loadingGallery ? 'Uploading Image...' : '📸 Upload Photo'}
+                    </button>
                   </div>
-                  <button type="submit" className="btn btn-primary" disabled={loadingGallery}>
-                    {loadingGallery ? 'Uploading image...' : 'Upload'}
-                  </button>
                 </form>
               </div>
 
-              {/* Gallery List */}
+              {/* Gallery Grid */}
               <div className="admin-card">
                 <h3>Uploaded Gallery Photos (등록된 사진 목록)</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '16px', marginTop: '16px' }}>
-                  {galleryItems.map((item) => (
-                    <div key={item.id} style={{ border: '1px solid var(--color-border)', borderRadius: '4px', overflow: 'hidden', background: 'var(--color-bg)' }}>
-                      <img src={item.imageUrl} alt={item.title} style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover' }} />
-                      <div style={{ padding: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                        <span style={{ fontSize: '0.8rem', fontWeight: 600, display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                          {item.title}
-                        </span>
-                        <button
-                          onClick={() => handleDeleteGallery(item.id)}
-                          style={{
-                            background: 'rgba(231,76,60,0.1)',
-                            border: 'none',
-                            color: '#e74c3c',
-                            padding: '4px 8px',
-                            borderRadius: '4px',
-                            cursor: 'pointer',
-                            fontSize: '0.75rem',
-                          }}
-                        >
-                          Delete
-                        </button>
+                {galleryItems.length === 0 ? (
+                  <div className="empty-state">등록된 갤러리 이미지가 없습니다. 훈련 모습을 업로드해 보세요.</div>
+                ) : (
+                  <div className="admin-gallery-grid">
+                    {galleryItems.map((item) => (
+                      <div key={item.id} className="admin-gallery-card">
+                        <div className="admin-gallery-img-wrapper">
+                          <img src={item.imageUrl} alt={item.title} />
+                        </div>
+                        <div className="admin-gallery-info">
+                          <p title={item.title}>{item.title}</p>
+                          <button
+                            onClick={() => handleDeleteGallery(item.id)}
+                            className="btn-delete-sm"
+                            style={{ width: '100%' }}
+                          >
+                            Delete Photo
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </>
           )}
