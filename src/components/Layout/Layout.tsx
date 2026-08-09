@@ -20,7 +20,7 @@ export default function Layout({ children }: LayoutProps) {
   const navLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/about', label: t('nav.about') },
-    { path: '/iconic-center', label: t('nav.iconicCenter') },
+    { path: '/project', label: t('nav.project') },
     { path: '/programs', label: t('nav.programs') },
     { path: '/community', label: t('nav.community') },
   ];

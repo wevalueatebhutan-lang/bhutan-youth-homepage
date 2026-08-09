@@ -1,151 +1,113 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Project",
-    "iconicCenter": "Iconic Center",
-    "programs": "Programs & Archive",
+    "about": "About BTF",
+    "project": "ODA Project",
+    "programs": "Activities",
     "community": "Community"
   },
   "home": {
-    "heroBadge": "KOICA × BTF Youth Development Project",
+    "heroBadge": "Bhutan Taekwondo Federation Portal",
     "heroTitleLine1": "Empowering Bhutanese Youth",
     "heroTitleLine2": "Through Sports and Value Education",
-    "heroSubtitle": "Welcome to the official portal for youth physical training, global health, and value education in Bhutan.",
-    "exploreBtn": "Explore Youth Programs",
-    "iconicBtn": "Iconic Center Facility",
+    "heroSubtitle": "The official portal for youth physical training and character development under BTF.",
+    "exploreBtn": "Explore Activities",
+    "iconicBtn": "ODA Project Details",
     "stats": {
       "graduates": "Trained Youth",
-      "centers": "Schools & Centers",
+      "centers": "Dojangs & Schools",
       "regions": "Target Regions",
       "satisfaction": "Satisfaction Rate"
     },
     "quickAccess": {
-      "title": "Quick Services",
-      "manualsTitle": "Youth Programs",
-      "manualsDesc": "Taekwondo, Health, and Value Education manuals and curricula",
-      "centerTitle": "Iconic Center",
-      "centerDesc": "Construction updates and layouts of the Thimphu multi-purpose gym",
+      "title": "Quick Guide",
+      "manualsTitle": "Activities",
+      "manualsDesc": "School programs, national training, and seminars",
+      "centerTitle": "ODA Project",
+      "centerDesc": "KOICA-supported youth development milestones and iconic center construction",
       "newsTitle": "News & Notice",
-      "newsDesc": "Official announcements, press releases, and active updates",
-      "aboutTitle": "About Project",
-      "aboutDesc": "Project background, objectives, and partnership roadmap"
+      "newsDesc": "Official announcements, press releases, and Facebook timelines",
+      "aboutTitle": "About BTF",
+      "aboutDesc": "Mission, history, and official board members of BTF"
     }
-  },
-  "center": {
-    "badge": "Facility Info",
-    "title": "Thimphu Iconic Center",
-    "subtitle": "Introducing the multi-purpose youth sports and educational facility being built in Thimphu, Bhutan.",
-    "sectionOverview": "Iconic Center Overview",
-    "sectionConstruction": "Construction Status",
-    "sectionDocs": "Facility Rental Rules & Forms"
   },
   "about": {
-    "badge": "About Project",
-    "title": "Our Mission & Journey",
-    "subtitle": "Building a sustainable ecosystem for youth development in Bhutan through sport, health, and values education.",
-    "sectionBackground": "Project Background",
-    "sectionBackgroundDesc": "The Bhutan Youth Development Project (2023–2026) is an ODA initiative supported by KOICA and implemented by the Bhutan Taekwondo Federation (BTF). It establishes a holistic development model combining Taekwondo, physical health, and character-building values for youth wellness.",
-    "sectionPartners": "Partners & Stakeholders",
-    "partnerKoica": "Korea International Cooperation Agency (KOICA)",
-    "partnerBtf": "Bhutan Taekwondo Federation (BTF)",
-    "roleKoica": "Donor Agency",
-    "roleBtf": "Implementing Agency"
+    "badge": "About BTF",
+    "title": "Bhutan Taekwondo Federation",
+    "subtitle": "The official national governing body of Taekwondo sport in the Kingdom of Bhutan.",
+    "visionTitle": "Mission & Vision",
+    "visionDesc": "To educate and guide Bhutanese youth through the core tenets of Taekwondo (Courtesy, Integrity, Perseverance, Self-Control, Indomitable Spirit), building physical fitness alongside leadership and moral character.",
+    "historyTitle": "Federation Milestones",
+    "historyStep1": "Official establishment of Bhutan Taekwondo Federation (BTF) and approval as an ATU member",
+    "historyStep2": "Affiliation as a regular member of the Bhutan Olympic Committee (BOC)",
+    "historyStep3": "Integration of Taekwondo into co-curricular activities across national schools",
+    "historyStep4": "Partnership agreement signed for the KOICA Youth Development ODA Project"
   },
-  "iconic": {
-    "badge": "Iconic Center",
-    "title": "Bhutan Youth Development Center",
-    "subtitle": "A state-of-the-art facility dedicated to holistic youth development, expected to be fully completed by late 2026.",
-    "sectionGuide": "Facilities Floor Guide",
-    "sectionProgress": "Construction Status",
-    "progressLabel": "Overall Completion",
-    "sectionBooking": "Visitor & Booking Info",
-    "bookingDesc": "For facility booking or rental inquiries, please download the request form below, fill it out, and submit it to the BTF Office.",
-    "downloadForm": "📄 Download Rental Form",
-    "floors": {
-      "b1": "Storage & Utilities",
-      "1f": "Taekwondo Gym & Changing Rooms",
-      "2f": "Lecture Rooms & Health Training Space",
-      "3f": "Admin Office & Board Rooms",
-      "roof": "Outdoor Training Deck"
-    }
+  "project": {
+    "badge": "ODA Project",
+    "title": "Youth Capacity Building Project",
+    "subtitle": "An official ODA project focused on youth education and infrastructure in partnership with KOICA.",
+    "tabOverview": "Overview",
+    "tabMilestones": "Milestones",
+    "tabCenter": "Iconic Center",
+    "overviewDesc": "Supported by the Korea International Cooperation Agency (KOICA), this ODA project aims to foster the capacity of Bhutanese youth by integrating physical training (Taekwondo) with global health education and core value alignment.",
+    "centerDesc": "Under construction in Thimphu, the Iconic Center serves as the primary hub for multi-purpose youth sports and educational training."
   },
   "programs": {
-    "badge": "Programs & Archive",
-    "title": "Manuals & Handbooks",
-    "subtitle": "Download our comprehensive educational guides developed for instructors, teachers, and trainers of Bhutan's youth programs.",
-    "sectionManuals": "The 4+1 Core Manuals",
-    "downloadBtn": "📥 Download PDF",
-    "manualList": {
-      "taekwondo": {
-        "title": "Taekwondo Education Manual",
-        "desc": "Customized textbook covering fundamental movements, poomsae, and spirit for youth."
-      },
-      "health": {
-        "title": "Youth Health Education Manual",
-        "desc": "An easy-to-understand guide on personal hygiene, physical fitness, and health basics."
-      },
-      "value": {
-        "title": "Value Education Manual",
-        "desc": "Sports value framework focusing on respect, responsibility, and ethical spirit."
-      },
-      "mental": {
-        "title": "Mental Health & Taekwondo Manual",
-        "desc": "Mindfulness-based training to promote emotional stability and resilience."
-      },
-      "lesson": {
-        "title": "Instructor Guide (Lesson Plan)",
-        "desc": "Step-by-step curriculum instructions for facilitators to execute classes."
-      }
+    "badge": "Activities",
+    "title": "Core Federation Programs",
+    "subtitle": "Key training and development programs run by BTF nationwide.",
+    "taekwondo": {
+      "title": "National School Taekwondo Spread",
+      "desc": "Regular dispatch of certified masters to schools and centers across Bhutan, offering free training and belt grading certification."
+    },
+    "health": {
+      "title": "National & Demo Team Training",
+      "desc": "Elite training program for international competitions alongside the official demo team for cultural events."
+    },
+    "value": {
+      "title": "Regional Instructor Seminars",
+      "desc": "Annual technical and safety workshops held in Thimphu for local regional coaches and youth leaders."
     }
   },
   "community": {
-    "badge": "Community",
-    "title": "News & Activity Gallery",
-    "subtitle": "Check out the latest announcements, press releases, and active field moments.",
-    "sectionNotice": "Notices",
-    "sectionGallery": "Photo Gallery",
-    "galleryDesc": "All gallery images are synced in real-time via Firebase Storage. Admins can upload photos from the Admin Dashboard.",
-    "sectionFacebook": "Official Facebook Feed",
-    "facebookDesc": "Follow the official Facebook page of the Bhutan Taekwondo Federation to get the fastest updates on active training sessions, local events, and youth achievements.",
+    "badge": "Notice Board",
+    "title": "News & Community",
+    "subtitle": "Check out active announcements and press releases from BTF.",
+    "sectionNotice": "Notice",
+    "sectionGallery": "Gallery",
+    "sectionFacebook": "Facebook Timeline",
+    "galleryDesc": "Sharing snapshots of school training, local competitions, and active training sessions.",
+    "facebookDesc": "Real-time feeds from our official Facebook channel. Follow and leave your warm support!",
     "defaultNotices": [
       {
         "id": "notice-1",
-        "tag": "Event",
-        "title": "[Korea Week] The 2nd Ambassador's Cup Bhutan Taekwondo Championship",
-        "content": "The Embassy of the Republic of Korea hosted the 2nd Ambassador's Cup Bhutan Taekwondo Championship at the International Boxing Training Center in Thimphu. Co-hosted with the Bhutan Taekwondo Federation (BTF), the event welcomed 150 youth trainees and athletes, alongside 200 spectators. Taekwondo shows high potential for growth in Bhutan due to its large practitioner base.",
-        "date": "2025.09.02"
+        "tag": "Events",
+        "title": "Success of the 2nd Ambassador Cup Taekwondo Championship",
+        "date": "2026-08-09",
+        "content": "Hosted by the Embassy of the Republic of Korea in Bangladesh, the championship concluded successfully in Thimphu with over 300 athletes showcasing spectacular skills."
       },
       {
         "id": "notice-2",
-        "tag": "Report",
-        "title": "Bhutan Youth Sport, Health, and Value Education Pilot Completion",
-        "content": "The first pilot educational program across 9 regions and 12 schools successfully graduated 1,087 youth trainees. Highly positive feedback was recorded in all evaluation domains: Taekwondo Education (4.00), Health Education (4.13), and Value Education (4.14), highlighting psychological and physical growth.",
-        "date": "2025.01.15"
+        "tag": "Notice",
+        "title": "Schedule Announcement for Fall Integrated Belt Grading",
+        "date": "2026-08-01",
+        "content": "Official belt promotion tests will be conducted sequentially across 9 target zones from October. Regional masters, please submit application forms on time."
       },
       {
         "id": "notice-3",
-        "tag": "Update",
-        "title": "Thimphu Iconic Youth Center Construction Reaches 65% Completion",
-        "content": "Supported by KOICA, the 'Iconic Center' — a multi-purpose youth sports and educational facility being built in Thimphu — has entered the final stages of its skeleton construction, marking a 65% completion rate. The project is on track to finish by late 2026.",
-        "date": "2024.12.15"
+        "tag": "ODA Report",
+        "title": "Construction Framework Completion for Thimphu Iconic Center (65% Progress)",
+        "date": "2026-07-20",
+        "content": "The structural concrete work for the multi-purpose youth center has completed. The project remains on schedule for its official grand opening in late 2026."
       }
     ]
   },
-  "admin": {
-    "logout": "Sign Out",
-    "login": "Admin Login",
-    "noticeTab": "📢 Manage Notices",
-    "galleryTab": "📸 Manage Gallery",
-    "manualTab": "📄 Upload Manuals",
-    "signOut": "Sign Out",
-    "postTitle": "Publish Notice",
-    "publishedTitle": "Published Notices"
-  },
   "footer": {
-    "navTitle": "Navigation",
-    "contactTitle": "Contact",
-    "partnersTitle": "Partners",
-    "support": "Supported by KOICA · Implemented by BTF",
-    "address": "Thimphu, Bhutan"
+    "support": "This portal is operated by BTF with the support of KOICA (Korea International Cooperation Agency).",
+    "navTitle": "Sitemap",
+    "contactTitle": "Contact us",
+    "address": "Changlimithang Stadium, Thimphu, Bhutan",
+    "partnersTitle": "Official Partners"
   }
 }

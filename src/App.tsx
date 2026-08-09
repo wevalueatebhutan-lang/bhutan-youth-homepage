@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import IconicCenter from './pages/IconicCenter/IconicCenter';
+import Project from './pages/Project/Project';
 import Programs from './pages/Programs/Programs';
 import Community from './pages/Community/Community';
 import AdminLogin from './pages/Admin/AdminLogin';
@@ -17,7 +17,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/iconic-center" element={<IconicCenter />} />
+          <Route path="/project" element={<Project />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/community" element={<Community />} />
         </Route>

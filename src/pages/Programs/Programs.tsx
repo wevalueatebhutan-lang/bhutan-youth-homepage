@@ -4,11 +4,9 @@ import '../PageShell.css';
 
 interface ProgramDetail {
   id: string;
-  category: 'sports' | 'health' | 'value' | 'cooperation';
   title: string;
   desc: string;
   details: string[];
-  pdfLink: string;
 }
 
 export default function Programs() {
@@ -18,51 +16,33 @@ export default function Programs() {
   const programsData: ProgramDetail[] = [
     {
       id: 'prog-1',
-      category: 'sports',
       title: t('programs.taekwondo.title'),
       desc: t('programs.taekwondo.desc'),
       details: [
-        '대상: 부탄 9개 지역 내 초·중·고 청소년 수련생',
-        '핵심 내용: 태권도 기본 품새, 겨루기 기술 및 국기원 공인 단(품)증 취득 프로세스 지원',
-        '성과: ODA 사업 1차 만족도 4.00/5.00점 획득, 신체적 역량 증대 확인',
+        '대상: 부탄 10개 종카(Dzongkhag) 내 초·중·고교 및 교육 기관',
+        '지원 사항: 공인 유단자 사범 무료 파견 및 방과 후 교실 수련 프로그램 개설',
+        '혜택: 국기원 공인 단(품) 심사 응시 지원 및 전용 기자재(도복, 매트 등) 대여',
       ],
-      pdfLink: 'https://wevalueatebhutan-6a832.web.app/taekwondo_manual.pdf',
     },
     {
       id: 'prog-2',
-      category: 'health',
       title: t('programs.health.title'),
       desc: t('programs.health.desc'),
       details: [
-        '대상: 부탄 현지 학교 및 훈련센터 청소년',
-        '핵심 내용: 기초 개인위생(손 씻기, 양치 등), 구급 상황 대처법 및 청소년기 성교육/감염병 예방 교육',
-        '성과: 보건위생 인지도 85% 상승, 시범 운영 만족도 4.13/5.00점',
+        '대상: 전국 예선 통과 엘리트 선수 및 단원',
+        '훈련 요강: 주 5회 강도 높은 체력 및 겨루기 기량 평가 시스템 작동',
+        '주요 대외 활동: 부탄 독립 기념식, 국왕 탄신 축하 행사 및 한-부탄 교류전 축하 시범 공연 참가',
       ],
-      pdfLink: 'https://wevalueatebhutan-6a832.web.app/health_manual.pdf',
     },
     {
       id: 'prog-3',
-      category: 'value',
       title: t('programs.value.title'),
       desc: t('programs.value.desc'),
       details: [
-        '대상: 부탄 전역 태권도 시범 운영학교 교육생',
-        '핵심 내용: 태권도 5대 정신(예의, 염치, 인내, 극기, 백절불굴)을 기반으로 한 부탄 청소년 맞춤형 인성 덕목 개발',
-        '성과: 정서적 조절 능력 향상 증명, 만족도 4.14/5.00점(최고 만족)',
+        '대상: 부탄 각 시범학교 전임 사범 및 주니어 리더',
+        '수강 과목: 올바른 지도 교수법, 태권도 5대 덕목 연계 인성 지도, 스포츠 응급 처치 및 심폐소생술(CPR)',
+        '주기: 매년 2회 팀푸 연맹 본부에서 집중 세미나 주관',
       ],
-      pdfLink: 'https://wevalueatebhutan-6a832.web.app/value_manual.pdf',
-    },
-    {
-      id: 'prog-4',
-      category: 'cooperation',
-      title: 'KOICA × BTF ODA Partnership',
-      desc: '한국과 부탄의 청소년 체육 발전을 위한 국제 협력 프로젝트 정보와 연차 보고서 아카이브를 제공합니다.',
-      details: [
-        '기관: 한국국제협력단(KOICA) 지원, 부탄태권도연맹(BTF) 현지 수행',
-        '범위: 태권도 기자재 무상 원조, 지도자 역량강화 세미나 개최, 현지 태권도원(아이코닉 센터) 건립 추진',
-        '의의: 스포츠를 활용한 글로벌 가치 교육 실천 모델 정립',
-      ],
-      pdfLink: 'https://wevalueatebhutan-6a832.web.app/annual_report.pdf',
     },
   ];
 
@@ -78,50 +58,21 @@ export default function Programs() {
       </div>
 
       <div className="container page-content">
-        {/* Category: Sports Education */}
-        <section className="content-section">
-          <h2 className="program-category-title">Sports &amp; Martial Arts (스포츠 수련 교육)</h2>
-          <div className="programs-grid">
-            {programsData.filter(p => p.category === 'sports').map((p) => (
-              <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
-                <span className="program-card-action">상세보기 &amp; 다운로드 →</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Category: Health & Value Education */}
-        <section className="content-section">
-          <h2 className="program-category-title">Health &amp; Value Development (보건 및 가치 성장 교육)</h2>
-          <div className="programs-grid">
-            {programsData.filter(p => p.category === 'health' || p.category === 'value').map((p) => (
-              <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
-                <span className="program-card-action">상세보기 &amp; 다운로드 →</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Category: Cooperation */}
         <section className="content-section" style={{ paddingBottom: '40px' }}>
-          <h2 className="program-category-title">Global Partnership &amp; ODA (국제협력 및 공적 개발 원조)</h2>
-          <div className="programs-grid">
-            {programsData.filter(p => p.category === 'cooperation').map((p) => (
+          <h2 className="program-category-title">핵심 교육 보급 사업 (BTF Core Programs)</h2>
+          <div className="programs-grid" style={{ marginTop: '24px' }}>
+            {programsData.map((p) => (
               <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
-                <span className="program-card-action">상세보기 &amp; 다운로드 →</span>
+                <span className="program-card-action">수련 안내 보기 →</span>
               </div>
             ))}
           </div>
         </section>
       </div>
 
-      {/* ── INTERACTIVE DETAIL MODAL POPUP ── */}
+      {/* ── DETAIL MODAL POPUP (NO MANUAL DOWNLOAD) ── */}
       {selectedProgram && (
         <div className="modal-overlay" onClick={() => setSelectedProgram(null)}>
           <div className="modal-content-box" onClick={(e) => e.stopPropagation()}>
@@ -133,29 +84,20 @@ export default function Programs() {
             
             {/* Modal Body */}
             <div className="modal-body">
-              <p className="modal-desc">{selectedProgram.desc}</p>
+              <p className="modal-desc" style={{ marginBottom: '20px', lineHeight: '1.6' }}>{selectedProgram.desc}</p>
               
               <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0f172a', margin: '0 0 10px' }}>
-                주요 교육 개요 &amp; 성과 지표
+                📌 세부 운영 요강 및 지원 대상
               </h4>
-              <ul className="modal-detail-list">
+              <ul className="modal-detail-list" style={{ paddingLeft: '20px', margin: 0 }}>
                 {selectedProgram.details.map((detail, idx) => (
-                  <li key={idx}>{detail}</li>
+                  <li key={idx} style={{ marginBottom: '6px', fontSize: '0.88rem' }}>• {detail}</li>
                 ))}
               </ul>
             </div>
 
             {/* Modal Footer */}
             <div className="modal-footer">
-              <a 
-                href={selectedProgram.pdfLink} 
-                download
-                className="btn btn-primary"
-                style={{ fontSize: '0.88rem', fontWeight: 700, padding: '10px 20px' }}
-                onClick={() => alert('교육용 교재 매핑 PDF 다운로드를 시작합니다.')}
-              >
-                교재 PDF 다운로드
-              </a>
               <button 
                 className="btn btn-outline" 
                 style={{ fontSize: '0.88rem', fontWeight: 700, padding: '8px 16px', borderColor: 'var(--border)' }}

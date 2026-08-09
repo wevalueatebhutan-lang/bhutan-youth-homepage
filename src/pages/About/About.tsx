@@ -6,7 +6,8 @@ export default function About() {
 
   return (
     <div className="page-shell">
-      <div className="page-hero" style={{ background: 'linear-gradient(135deg, rgba(17, 94, 201, 0.2), rgba(7, 13, 26, 0.95))' }}>
+      {/* Sub Hero */}
+      <div className="page-hero" style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)' }}>
         <div className="container">
           <div className="page-hero-badge">{t('about.badge')}</div>
           <h1>{t('about.title')}</h1>
@@ -15,36 +16,73 @@ export default function About() {
       </div>
 
       <div className="container page-content">
-        <section className="content-section">
-          <h2>{t('about.sectionBackground')}</h2>
-          <p>{t('about.sectionBackgroundDesc')}</p>
-          <div className="timeline">
+        {/* 미션 및 비전 */}
+        <section className="content-section" style={{ textAlign: 'left' }}>
+          <div className="section-header-border">
+            <h2>{t('about.visionTitle')}</h2>
+          </div>
+          <p style={{ lineHeight: '1.8', color: '#334155', fontSize: '0.98rem', margin: 0 }}>
+            {t('about.visionDesc')}
+          </p>
+        </section>
+
+        {/* 연맹의 4대 역사 단계 */}
+        <section className="content-section" style={{ textAlign: 'left' }}>
+          <div className="section-header-border">
+            <h2>{t('about.historyTitle')}</h2>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
-              { year: '2023', event: 'Project launch — needs assessment and expert deployment (사업 착수 및 전문가 투입)' },
-              { year: '2024', event: 'Pilot programs launched across 9 regions (9개 지역 시범운영 개시)' },
-              { year: '2025', event: '1,087 youth graduates — manual development completed (1,087명 수료 및 교재 개발 완료)' },
-              { year: '2026', event: 'Iconic Center completion and handover (아이코닉 센터 준공 및 최종 이관)' },
-            ].map((item) => (
-              <div className="timeline-item" key={item.year}>
-                <div className="timeline-year">{item.year}</div>
-                <div className="timeline-event">{item.event}</div>
+              { num: '01', title: '1997', desc: t('about.historyStep1') },
+              { num: '02', title: '2000', desc: t('about.historyStep2') },
+              { num: '03', title: '2010', desc: t('about.historyStep3') },
+              { num: '04', title: '2023', desc: t('about.historyStep4') }
+            ].map((step, idx) => (
+              <div key={idx} style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', background: 'var(--bg-sub)', padding: '20px', borderRadius: '4px', border: '1px solid var(--border)' }}>
+                <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--accent)', lineHeight: 1 }}>{step.title}</span>
+                <div style={{ flex: '1' }}>
+                  <p style={{ margin: 0, fontWeight: 700, fontSize: '0.92rem', color: '#0f172a' }}>{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="content-section">
-          <h2>{t('about.sectionPartners')}</h2>
-          <div className="partner-grid">
-            {[
-              { name: t('about.partnerKoica'), role: t('about.roleKoica') },
-              { name: t('about.partnerBtf'), role: t('about.roleBtf') },
-            ].map((p) => (
-              <div className="partner-card" key={p.name}>
-                <h3>{p.name}</h3>
-                <p>{p.role}</p>
-              </div>
-            ))}
+        {/* 조직도 / 연맹 지부 정보 */}
+        <section className="content-section" style={{ textAlign: 'left', paddingBottom: '40px' }}>
+          <div className="section-header-border">
+            <h2>연맹 조직 및 지부 안내 (BTF Structure)</h2>
+          </div>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontSize: '0.9rem' }}>
+            부탄 올림픽 위원회(BOC) 산하의 공식 태권도 행정 위원회 구성 명세입니다.
+          </p>
+          <div className="portal-table-container">
+            <table className="portal-info-table">
+              <thead>
+                <tr>
+                  <th style={{ width: '25%' }}>구분 (Division)</th>
+                  <th style={{ width: '35%' }}>직위 (Position)</th>
+                  <th style={{ width: '40%' }}>주요 관리 업무 (Responsibility)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ fontWeight: 700 }}>의결 기구</td>
+                  <td style={{ fontWeight: 600 }}>연맹 회장 (President) &amp; 이사회</td>
+                  <td>연맹 운영 최종 의사 결정 및 BOC 조율</td>
+                </tr>
+                <tr>
+                  <td style={{ fontWeight: 700 }}>행정 사무국</td>
+                  <td style={{ fontWeight: 600 }}>사무총장 (Secretary General) &amp; 관리부</td>
+                  <td>재정 집행, ODA 실무 공조 및 사범 파견 행정 처리</td>
+                </tr>
+                <tr>
+                  <td style={{ fontWeight: 700 }}>기술/교육 위원회</td>
+                  <td style={{ fontWeight: 600 }}>기술위원장 및 공인 지도자 그룹</td>
+                  <td>전국 승급 승단 심사 주관, 심판 교육 및 대회 기술 기술 지도</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>
