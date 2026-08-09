@@ -113,6 +113,7 @@ export default function Project() {
               {/* Progress bar */}
               <div style={{ width: '100%', height: '14px', background: '#e2e8f0', borderRadius: '99px', overflow: 'hidden', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.06)' }}>
                 <div 
+                  key={activeTab} // 탭이 바뀔 때마다 완전히 새로 마운트시켜 100% 애니메이션을 발생시킵니다.
                   className="animate-progress-65"
                   style={{ 
                     width: '0%', // 0%에서 시작해 애니메이션에 의해 65%로 채워짐
