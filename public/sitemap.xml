@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
+  <url>
+    <loc>https://bhutantaekwondo.org/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- About Page -->
+  <url>
+    <loc>https://bhutantaekwondo.org/about</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Iconic Center Page -->
+  <url>
+    <loc>https://bhutantaekwondo.org/iconic-center</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Programs Page -->
+  <url>
+    <loc>https://bhutantaekwondo.org/programs</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Community Page -->
+  <url>
+    <loc>https://bhutantaekwondo.org/community</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

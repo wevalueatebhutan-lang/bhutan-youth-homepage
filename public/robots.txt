@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Host & Sitemap definition for search engines
+Host: https://bhutantaekwondo.org
+Sitemap: https://bhutantaekwondo.org/sitemap.xml

@@ -1,0 +1,283 @@
+/* ========================================
+   Home.css — Minimal Flat Professional
+   ======================================== */
+
+/* Hero */
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.75) 100%),
+    url('/taekwondo_hero.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(232, 131, 42, 0.2) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(17, 94, 201, 0.2) 0%, transparent 60%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding-block: 140px 80px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 24px;
+  animation: fadeUp 0.7s 0.1s ease both;
+}
+
+.hero-title span {
+  background: linear-gradient(90deg, #e8832a, #ffbe76);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 580px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.3s ease both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroll-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 0.7;
+}
+
+/* Stats */
+.stats-section {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  text-align: left;
+  padding: 24px 28px;
+  border-radius: 6px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition);
+}
+.stat-card:hover {
+  border-color: var(--color-accent);
+}
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 12px;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.03em;
+}
+.stat-suffix {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Quick Links */
+.quick-links-section {
+  padding: 80px 24px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-accent);
+  margin-top: 10px;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.quick-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 28px;
+  border-radius: 6px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--card-accent, var(--color-accent));
+  transition: all var(--transition);
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+.quick-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  border-color: var(--color-accent);
+}
+.quick-link-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.quick-link-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.ql-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+.ql-more-text {
+  position: relative;
+}
+.ql-more-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.quick-link-card:hover .ql-more-text::after {
+  transform: scaleX(1);
+}
+
+.ql-arrow {
+  font-size: 1.1rem;
+  transition: transform var(--transition);
+}
+.quick-link-card:hover .ql-arrow {
+  transform: translateX(4px);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quick-links-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .quick-links-grid { grid-template-columns: 1fr; }
+}
