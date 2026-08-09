@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // notices (공지사항) 컬렉션 규칙
+    match /notices/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // gallery (갤러리) 컬렉션 규칙
+    match /gallery/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}

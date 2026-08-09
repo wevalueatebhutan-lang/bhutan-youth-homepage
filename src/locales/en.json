@@ -97,6 +97,8 @@
     "sectionNotice": "Notices",
     "sectionGallery": "Photo Gallery",
     "galleryDesc": "All gallery images are synced in real-time via Firebase Storage. Admins can upload photos from the Admin Dashboard.",
+    "sectionFacebook": "Official Facebook Feed",
+    "facebookDesc": "Follow the official Facebook page of the Bhutan Taekwondo Federation to get the fastest updates on active training sessions, local events, and youth achievements.",
     "defaultNotices": [
       {
         "id": "notice-1",

@@ -152,6 +152,57 @@ export default function Community() {
             </div>
           )}
         </section>
+
+        {/* Facebook Feed Section */}
+        <section className="content-section" style={{ borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
+          <h2>{t('community.sectionFacebook')}</h2>
+          <div className="facebook-container-layout" style={{ display: 'flex', gap: '32px', marginTop: '24px', alignItems: 'flex-start' }}>
+            {/* Widget Iframe */}
+            <div className="facebook-widget-box" style={{ flex: '0 0 340px', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: '6px', overflow: 'hidden', boxShadow: 'var(--shadow-card)' }}>
+              <iframe 
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbhutantaekwondo&tabs=timeline&width=340&height=450&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+                width="340" 
+                height="450" 
+                style={{ border: 'none', overflow: 'hidden' }} 
+                scrolling="no" 
+                frameBorder="0" 
+                allowFullScreen={true} 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Bhutan Taekwondo Facebook Feed"
+              />
+            </div>
+            {/* Info Text Box */}
+            <div className="facebook-info-box" style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '16px', justifyContent: 'center', minHeight: '300px' }}>
+              <span style={{ fontSize: '0.8rem', color: '#1877F2', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Social Media Channel</span>
+              <h3 style={{ fontSize: '1.4rem', fontWeight: 800, margin: 0 }}>Bhutan Taekwondo Federation Facebook Page</h3>
+              <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6', fontSize: '0.95rem', maxWidth: '600px', margin: 0 }}>
+                {t('community.facebookDesc')}
+              </p>
+              <div style={{ marginTop: '12px' }}>
+                <a 
+                  href="https://www.facebook.com/bhutantaekwondo/?locale=ko_KR" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-primary"
+                  style={{ 
+                    display: 'inline-flex', 
+                    alignItems: 'center', 
+                    gap: '10px', 
+                    backgroundColor: '#1877F2', 
+                    borderColor: '#1877F2',
+                    padding: '12px 24px',
+                    fontWeight: 700
+                  }}
+                >
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  Visit Facebook Page
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
