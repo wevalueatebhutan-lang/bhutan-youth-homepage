@@ -79,34 +79,33 @@
 /* ── TAB FILTER SYSTEM ── */
 .portal-tab-container {
   display: flex;
-  gap: 8px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 8px;
-  margin-bottom: 24px;
+  gap: 0px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 32px;
 }
 
 .portal-tab-container .portal-tab-btn {
-  background-color: #f8fafc !important;
-  border: 1px solid #e2e8f0 !important;
-  color: #475569 !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  color: #64748b !important;
   font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 14px 28px;
+  border-radius: 0px !important;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s;
+  font-size: 0.95rem;
+  transition: all 0.15s ease-in-out;
 }
 
 .portal-tab-container .portal-tab-btn:hover {
-  background-color: #f1f5f9 !important;
   color: #0f172a !important;
 }
 
 .portal-tab-container .portal-tab-btn.active {
-  background-color: #115ec9 !important;
-  color: #ffffff !important;
-  border-color: #115ec9 !important;
-  box-shadow: 0 2px 4px rgba(17, 94, 201, 0.2) !important;
+  color: var(--accent) !important;
+  border-bottom: 3px solid var(--accent) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 /* ── PORTAL BOARD TABLE ── */

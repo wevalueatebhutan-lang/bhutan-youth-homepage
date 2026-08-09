@@ -105,7 +105,7 @@ export default function Project() {
             </p>
 
             {/* 65% Construction Progress Banner */}
-            <div style={{ background: '#f8fafc', border: '1px solid var(--border)', borderRadius: '6px', padding: '24px', marginBottom: '32px' }}>
+            <div style={{ background: '#ffffff', border: '1px solid #cbd5e1', borderLeft: '5px solid var(--accent)', borderRadius: '2px', padding: '24px', marginBottom: '32px', boxShadow: '0 1px 3px rgba(0,0,0,0.02)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
                 <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#0f172a' }}>🏗️ {t('project.centerProgressTitle')}</span>
                 <span style={{ fontSize: '1.1rem', fontWeight: 900, color: 'var(--accent)' }}>65%</span>
