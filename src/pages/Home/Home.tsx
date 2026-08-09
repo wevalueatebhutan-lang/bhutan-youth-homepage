@@ -66,7 +66,7 @@ export default function Home() {
             {[
               { href: '/programs', className: 'quick-card card-blue reveal-fade reveal-delay-1', title: t('home.quickAccess.manualsTitle'), desc: t('home.quickAccess.manualsDesc') },
               { href: '/project', className: 'quick-card card-emerald reveal-fade reveal-delay-2', title: t('home.quickAccess.centerTitle'), desc: t('home.quickAccess.centerDesc') },
-              { href: '/programs', className: 'quick-card card-purple reveal-fade reveal-delay-3', title: t('programs.badge'), desc: '가치 보건 교육 교재 다운로드' },
+              { href: '/programs', className: 'quick-card card-purple reveal-fade reveal-delay-3', title: t('home.quickAccess.manualsDownloadTitle'), desc: t('home.quickAccess.manualsDownloadDesc') },
               { href: '/community', className: 'quick-card card-orange reveal-fade reveal-delay-4', title: t('home.quickAccess.newsTitle'), desc: t('home.quickAccess.newsDesc') }
             ].map((item, idx) => (
               <a href={item.href} className={item.className} key={idx}>

@@ -59,7 +59,7 @@ export default function Programs() {
 
       <div className="container page-content">
         <section className="content-section" style={{ paddingBottom: '40px' }}>
-          <h2 className="program-category-title">핵심 교육 보급 사업 (BTF Core Programs)</h2>
+          <h2 className="program-category-title">{t('programs.title')} (BTF Core Programs)</h2>
           <div className="programs-grid" style={{ marginTop: '24px' }}>
             {programsData.map((p, idx) => (
               <div 
@@ -69,7 +69,7 @@ export default function Programs() {
               >
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
-                <span className="program-card-action">수련 안내 보기 →</span>
+                <span className="program-card-action">{t('programs.viewDetails')} →</span>
               </div>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function Programs() {
               <p className="modal-desc" style={{ marginBottom: '20px', lineHeight: '1.6' }}>{selectedProgram.desc}</p>
               
               <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0f172a', margin: '0 0 10px' }}>
-                📌 세부 운영 요강 및 지원 대상
+                {t('programs.modalDetailsTitle')}
               </h4>
               <ul className="modal-detail-list" style={{ paddingLeft: '20px', margin: 0 }}>
                 {selectedProgram.details.map((detail, idx) => (
@@ -107,7 +107,7 @@ export default function Programs() {
                 style={{ fontSize: '0.88rem', fontWeight: 700, padding: '8px 16px', borderColor: 'var(--border)' }}
                 onClick={() => setSelectedProgram(null)}
               >
-                닫기
+                {t('programs.close')}
               </button>
             </div>
           </div>

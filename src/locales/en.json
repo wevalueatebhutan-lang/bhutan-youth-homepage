@@ -28,7 +28,9 @@
       "newsTitle": "News & Notice",
       "newsDesc": "Official announcements, press releases, and Facebook timelines",
       "aboutTitle": "About BTF",
-      "aboutDesc": "Mission, history, and official board members of BTF"
+      "aboutDesc": "Mission, history, and official board members of BTF",
+      "manualsDownloadTitle": "Manual Downloads",
+      "manualsDownloadDesc": "Guide to value and health education manual files"
     }
   },
   "about": {
@@ -57,6 +59,9 @@
     "badge": "Activities",
     "title": "Core Federation Programs",
     "subtitle": "Key training and development programs run by BTF nationwide.",
+    "viewDetails": "View Details",
+    "modalDetailsTitle": "Program Outline & Target",
+    "close": "Close",
     "taekwondo": {
       "title": "National School Taekwondo Spread",
       "desc": "Regular dispatch of certified masters to schools and centers across Bhutan, offering free training and belt grading certification."
