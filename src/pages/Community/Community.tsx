@@ -84,22 +84,32 @@ export default function Community() {
           <h2>{t('community.sectionNotice')}</h2>
           {loadingNotices ? (
             <div style={{ color: 'var(--color-text-muted)', padding: '20px 0' }}>Loading notices...</div>
-          ) : notices.length === 0 ? (
-            <div style={{ color: 'var(--color-text-muted)', padding: '20px 0' }}>
-              등록된 공지사항이 없습니다. (No notices found.)
-            </div>
           ) : (
             <div className="notice-list">
-              {notices.map((n) => (
-                <div className="notice-item" key={n.id}>
-                  <div className="notice-tag">{n.tag}</div>
-                  <div className="notice-body">
-                    <h3>{n.title}</h3>
-                    <p style={{ marginBlock: '8px', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>{n.content}</p>
-                    <span className="notice-date">{n.date}</span>
+              {/* If Firestore is empty, load localized default notices */}
+              {notices.length === 0 ? (
+                ((t('community.defaultNotices', { returnObjects: true }) as any[]) || []).map((n: any) => (
+                  <div className="notice-item" key={n.id}>
+                    <div className="notice-tag">{n.tag}</div>
+                    <div className="notice-body">
+                      <h3>{n.title}</h3>
+                      <p style={{ marginBlock: '8px', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>{n.content}</p>
+                      <span className="notice-date">{n.date}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                notices.map((n) => (
+                  <div className="notice-item" key={n.id}>
+                    <div className="notice-tag">{n.tag}</div>
+                    <div className="notice-body">
+                      <h3>{n.title}</h3>
+                      <p style={{ marginBlock: '8px', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>{n.content}</p>
+                      <span className="notice-date">{n.date}</span>
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
           )}
         </section>

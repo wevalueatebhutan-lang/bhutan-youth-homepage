@@ -96,7 +96,30 @@
     "subtitle": "Check out the latest announcements, press releases, and active field moments.",
     "sectionNotice": "Notices",
     "sectionGallery": "Photo Gallery",
-    "galleryDesc": "All gallery images are synced in real-time via Firebase Storage. Admins can upload photos from the Admin Dashboard."
+    "galleryDesc": "All gallery images are synced in real-time via Firebase Storage. Admins can upload photos from the Admin Dashboard.",
+    "defaultNotices": [
+      {
+        "id": "notice-1",
+        "tag": "Event",
+        "title": "[Korea Week] The 2nd Ambassador's Cup Bhutan Taekwondo Championship",
+        "content": "The Embassy of the Republic of Korea hosted the 2nd Ambassador's Cup Bhutan Taekwondo Championship at the International Boxing Training Center in Thimphu. Co-hosted with the Bhutan Taekwondo Federation (BTF), the event welcomed 150 youth trainees and athletes, alongside 200 spectators. Taekwondo shows high potential for growth in Bhutan due to its large practitioner base.",
+        "date": "2025.09.02"
+      },
+      {
+        "id": "notice-2",
+        "tag": "Report",
+        "title": "Bhutan Youth Sport, Health, and Value Education Pilot Completion",
+        "content": "The first pilot educational program across 9 regions and 12 schools successfully graduated 1,087 youth trainees. Highly positive feedback was recorded in all evaluation domains: Taekwondo Education (4.00), Health Education (4.13), and Value Education (4.14), highlighting psychological and physical growth.",
+        "date": "2025.01.15"
+      },
+      {
+        "id": "notice-3",
+        "tag": "Update",
+        "title": "Thimphu Iconic Youth Center Construction Reaches 65% Completion",
+        "content": "Supported by KOICA, the 'Iconic Center' — a multi-purpose youth sports and educational facility being built in Thimphu — has entered the final stages of its skeleton construction, marking a 65% completion rate. The project is on track to finish by late 2026.",
+        "date": "2024.12.15"
+      }
+    ]
   },
   "admin": {
     "logout": "Sign Out",
