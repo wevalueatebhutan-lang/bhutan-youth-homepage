@@ -182,7 +182,7 @@ export default function Layout({ children }: LayoutProps) {
               <p style={{ margin: '0 0 8px', fontSize: '0.88rem', color: '#cbd5e1' }}><strong>Tel:</strong> +975 02 339899</p>
               <a href="mailto:info@bhutantaekwondo.org" className="footer-email">info@bhutantaekwondo.org</a>
             </div>
-            <div className="footer-col">
+             <div className="footer-col">
               <h4>{t('footer.partnersTitle')}</h4>
               <p>Korea International Cooperation Agency (KOICA)</p>
               <p>
@@ -190,7 +190,14 @@ export default function Layout({ children }: LayoutProps) {
                   (사)한국국제개발협력센터 (KIDC)
                 </a>
               </p>
-              <p>Bhutan Taekwondo Federation (BTF)</p>
+            </div>
+            <div className="footer-col">
+              <h4>{t('footer.relatedTitle')}</h4>
+              <p>
+                <a href="https://asiantaekwondo.org/gboard/bbs/board.php?bo_table=members&wr_id=13" target="_blank" rel="noreferrer" style={{ color: '#cbd5e1', textDecoration: 'underline' }}>
+                  Asian Taekwondo Union (ATU)
+                </a>
+              </p>
             </div>
           </div>
 
