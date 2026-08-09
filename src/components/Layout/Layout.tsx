@@ -54,17 +54,12 @@ export default function Layout({ children }: LayoutProps) {
     <div className="layout-wrapper">
       {/* ── UPPER UTILITY BAR ── */}
       <div className="utility-bar">
-        <div className="container utility-inner">
-          <span className="gov-badge">
-            Official Portal of Bhutan Youth Development Project
-          </span>
+        <div className="container utility-inner" style={{ justifyContent: 'flex-end' }}>
           <div className="utility-right">
             {/* Language Switcher */}
             <button className="lang-switcher-btn" onClick={toggleLanguage}>
               {i18n.language === 'ko' ? 'English' : '한국어'}
             </button>
-            <span className="divider">|</span>
-            <Link to="/admin/login" className="admin-login-link">Admin Login</Link>
           </div>
         </div>
       </div>
