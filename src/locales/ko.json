@@ -52,7 +52,10 @@
     "secretariat": "행정 사무국 (Secretariat)",
     "secretariatMembers": "팀푸 본부 사무국장 1명, 행정 대리 2명, 회계 담당 1명",
     "regionalDTA": "지역 지부 (Regional DTAs)",
-    "regionalDTAMembers": "전국 10개 종카(Dzongkhag) 태권도 협회 지부 사범 10명 파견 운영"
+    "regionalDTAMembers": "전국 10개 종카(Dzongkhag) 태권도 협회 지부 사범 10명 파견 운영",
+    "locationTitle": "찾아오는 길",
+    "locationDesc": "부탄태권도연맹 트레이닝 센터 및 행정 사무국 위치 안내",
+    "openMaps": "구글 지도에서 크게 보기"
   },
   "project": {
     "badge": "ODA Project",

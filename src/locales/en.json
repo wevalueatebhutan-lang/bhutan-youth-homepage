@@ -52,7 +52,10 @@
     "secretariat": "Secretariat",
     "secretariatMembers": "1 Director at Thimphu HQ, 2 Administrative Assistants, 1 Treasurer",
     "regionalDTA": "Regional DTAs",
-    "regionalDTAMembers": "10 Active Coaches dispatched to 10 Dzongkhag Taekwondo Associations"
+    "regionalDTAMembers": "10 Active Coaches dispatched to 10 Dzongkhag Taekwondo Associations",
+    "locationTitle": "Location & Directions",
+    "locationDesc": "BTF Training Center & Administrative Headquarters Location",
+    "openMaps": "Open in Google Maps"
   },
   "project": {
     "badge": "ODA Project",
