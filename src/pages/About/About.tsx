@@ -51,35 +51,29 @@ export default function About() {
         {/* 조직도 / 연맹 지부 정보 */}
         <section className="content-section reveal-fade" style={{ textAlign: 'left', paddingBottom: '40px' }}>
           <div className="section-header-border">
-            <h2>연맹 조직 및 지부 안내 (BTF Structure)</h2>
+            <h2>{t('about.structureTitle')} (BTF Structure)</h2>
           </div>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontSize: '0.9rem' }}>
-            부탄 올림픽 위원회(BOC) 산하의 공식 태권도 행정 위원회 구성 명세입니다.
-          </p>
-          <div className="portal-table-container">
+          
+          <div className="portal-table-container" style={{ marginTop: '20px' }}>
             <table className="portal-info-table">
               <thead>
                 <tr>
-                  <th style={{ width: '25%' }}>구분 (Division)</th>
-                  <th style={{ width: '35%' }}>직위 (Position)</th>
-                  <th style={{ width: '40%' }}>주요 관리 업무 (Responsibility)</th>
+                  <th>{t('about.tableColDivision')}</th>
+                  <th>{t('about.tableColMembers')}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ fontWeight: 700 }}>의결 기구</td>
-                  <td style={{ fontWeight: 600 }}>연맹 회장 (President) &amp; 이사회</td>
-                  <td>연맹 운영 최종 의사 결정 및 BOC 조율</td>
+                  <td style={{ fontWeight: 700 }}>{t('about.execBoard')}</td>
+                  <td>{t('about.execBoardMembers')}</td>
                 </tr>
                 <tr>
-                  <td style={{ fontWeight: 700 }}>행정 사무국</td>
-                  <td style={{ fontWeight: 600 }}>사무총장 (Secretary General) &amp; 관리부</td>
-                  <td>재정 집행, ODA 실무 공조 및 사범 파견 행정 처리</td>
+                  <td style={{ fontWeight: 700 }}>{t('about.secretariat')}</td>
+                  <td>{t('about.secretariatMembers')}</td>
                 </tr>
                 <tr>
-                  <td style={{ fontWeight: 700 }}>기술/교육 위원회</td>
-                  <td style={{ fontWeight: 600 }}>기술위원장 및 공인 지도자 그룹</td>
-                  <td>전국 승급 승단 심사 주관, 심판 교육 및 대회 기술 기술 지도</td>
+                  <td style={{ fontWeight: 700 }}>{t('about.regionalDTA')}</td>
+                  <td>{t('about.regionalDTAMembers')}</td>
                 </tr>
               </tbody>
             </table>

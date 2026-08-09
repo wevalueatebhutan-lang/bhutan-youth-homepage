@@ -77,10 +77,10 @@ export default function Project() {
             {/* Timeline Layout */}
             <div className="timeline-container" style={{ display: 'flex', flexDirection: 'column', gap: '24px', position: 'relative', paddingLeft: '24px', borderLeft: '2px solid var(--accent)' }}>
               {[
-                { year: '2023', title: 'ODA 사업 착수 및 타당성 조사', desc: 'KOICA 파트너십 구축, 현지 청소년 개발 인지도 기초 조사 완수 및 연맹 중심 사범 파견 계획 승인.' },
-                { year: '2024', title: '정규 학교 시범 교육 프로그램 개시', desc: '초·중·고 12개교 정규 보급 사범 배치, 총 1,087명 청소년 1차 교육 수료 및 교재 검수 완료.' },
-                { year: '2025', title: '팀푸 청소년 다목적 체육관 착공', desc: 'KOICA 지원금 기반 대지 확보 및 청소년 체육 교육 전문 Iconic Center 건물 기공식 시행.' },
-                { year: '2026', title: '아이코닉 센터 완공 및 현지 이관 준비 (예정)', desc: '연말 공식 개관 후, 교육 매뉴얼 및 인프라 관리 권한을 부탄태권도연맹(BTF)에 전면 이전.' }
+                { year: '2023', title: t('project.timeline.t2023'), desc: t('project.timeline.d2023') },
+                { year: '2024', title: t('project.timeline.t2024'), desc: t('project.timeline.d2024') },
+                { year: '2025', title: t('project.timeline.t2025'), desc: t('project.timeline.d2025') },
+                { year: '2026', title: t('project.timeline.t2026'), desc: t('project.timeline.d2026') }
               ].map((step, idx) => (
                 <div className="timeline-step" key={idx} style={{ position: 'relative' }}>
                   {/* Circle Pin */}
@@ -100,12 +100,28 @@ export default function Project() {
             <div className="section-header-border">
               <h2>{t('project.tabCenter')}</h2>
             </div>
-            <p style={{ lineHeight: '1.7', color: '#334155', fontSize: '0.98rem', marginBottom: '24px' }}>
+            <p style={{ lineHeight: '1.6', color: '#475569', marginBottom: '24px', fontSize: '0.92rem' }}>
               {t('project.centerDesc')}
             </p>
 
-            {/* Table Detail */}
-            <div className="portal-table-container" style={{ marginBottom: '32px' }}>
+            {/* 65% Construction Progress Banner */}
+            <div style={{ background: '#f8fafc', border: '1px solid var(--border)', borderRadius: '6px', padding: '24px', marginBottom: '32px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#0f172a' }}>🏗️ {t('project.centerProgressTitle')}</span>
+                <span style={{ fontSize: '1.1rem', fontWeight: 900, color: 'var(--accent)' }}>65%</span>
+              </div>
+              {/* Progress bar */}
+              <div style={{ width: '100%', height: '8px', background: '#e2e8f0', borderRadius: '99px', overflow: 'hidden' }}>
+                <div style={{ width: '65%', height: '100%', background: 'var(--accent)' }} />
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '8px', margin: '8px 0 0' }}>
+                {t('project.centerProgressDesc')}
+              </p>
+            </div>
+
+            {/* Facility specs table */}
+            <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>🏢 {t('project.centerTableTitle')}</h4>
+            <div className="portal-table-container">
               <table className="portal-info-table">
                 <thead>
                   <tr>

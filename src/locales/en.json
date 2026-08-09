@@ -43,7 +43,16 @@
     "historyStep1": "Official establishment of Bhutan Taekwondo Federation (BTF) and approval as an ATU member",
     "historyStep2": "Affiliation as a regular member of the Bhutan Olympic Committee (BOC)",
     "historyStep3": "Integration of Taekwondo into co-curricular activities across national schools",
-    "historyStep4": "Partnership agreement signed for the KOICA Youth Development ODA Project"
+    "historyStep4": "Partnership agreement signed for the KOICA Youth Development ODA Project",
+    "structureTitle": "BTF Structure & Personnel",
+    "tableColDivision": "Division",
+    "tableColMembers": "Members & Personnel",
+    "execBoard": "Executive Board",
+    "execBoardMembers": "1 President, 2 Vice Presidents, 1 Secretary General, 7 Board Members",
+    "secretariat": "Secretariat",
+    "secretariatMembers": "1 Director at Thimphu HQ, 2 Administrative Assistants, 1 Treasurer",
+    "regionalDTA": "Regional DTAs",
+    "regionalDTAMembers": "10 Active Coaches dispatched to 10 Dzongkhag Taekwondo Associations"
   },
   "project": {
     "badge": "ODA Project",
@@ -53,7 +62,29 @@
     "tabMilestones": "Milestones",
     "tabCenter": "Iconic Center",
     "overviewDesc": "Supported by the Korea International Cooperation Agency (KOICA), this ODA project aims to foster the capacity of Bhutanese youth by integrating physical training (Taekwondo) with global health education and core value alignment. The project is managed by the Korea International Development Cooperation Center (KIDC) as the Project Management Consultant (PMC).",
-    "centerDesc": "Under construction in Thimphu, the Iconic Center serves as the primary hub for multi-purpose youth sports and educational training."
+    "centerDesc": "Under construction in Thimphu, the Iconic Center serves as the primary hub for multi-purpose youth sports and educational training.",
+    "timeline": {
+      "t2023": "ODA Project Initiation & Feasibility Study",
+      "d2023": "Established KOICA partnership, completed baseline survey on youth awareness, and approved Master dispatch plan.",
+      "t2024": "Launch of Regular School Program",
+      "d2024": "Dispatched certified masters to 12 target schools, 1,087 students graduated the 1st cycle, and manuals reviewed.",
+      "t2025": "Groundbreaking of Multi-purpose Gym in Thimphu",
+      "d2025": "Secured land plot with KOICA assistance, hosting the groundbreaking ceremony of the Iconic Center specialized gym.",
+      "t2026": "Iconic Center Completion & Transition (Target)",
+      "d2026": "Following late 2026 opening, administrative and operational control will be fully transferred to BTF."
+    },
+    "centerProgressTitle": "Center Construction Progress",
+    "centerProgressDesc": "Targeting completion by late 2026, framework concrete works are completed, and interior utility installations are actively ongoing.",
+    "centerTableTitle": "Floor Plan & Specifications",
+    "tableColFloor": "Floor",
+    "tableColUse": "Primary Use",
+    "tableColArea": "Area",
+    "floor1": "1st Floor",
+    "use1": "Main Taekwondo training arena, changing rooms, and shower facilities",
+    "floor2": "2nd Floor",
+    "use2": "Gymnasium, multi-purpose lecture rooms, and visual media seminar rooms",
+    "floor3": "3rd Floor",
+    "use3": "Administrative secretariat offices, instructor quarters, and VIP lounge"
   },
   "programs": {
     "badge": "Activities",

@@ -43,7 +43,16 @@
     "historyStep1": "부탄태권도연맹(BTF) 공식 창립 및 아시아태권도연맹 회원국 승인",
     "historyStep2": "부탄 국가 올림픽 위원회(BOC) 정식 가맹 단체 등록",
     "historyStep3": "전국 초·중·고교 특별 활동(Co-curricular) 공식 과목 채택",
-    "historyStep4": "KOICA 청소년 개발 ODA 프로젝트 협정 체결 및 추진 가동"
+    "historyStep4": "KOICA 청소년 개발 ODA 프로젝트 협정 체결 및 추진 가동",
+    "structureTitle": "연맹 조직 및 지부 안내",
+    "tableColDivision": "구분",
+    "tableColMembers": "주요 구성 및 인원",
+    "execBoard": "의결 기구 (Executive Board)",
+    "execBoardMembers": "총재 1명, 부총재 2명, 사무총장 1명, 집행위원 7명",
+    "secretariat": "행정 사무국 (Secretariat)",
+    "secretariatMembers": "팀푸 본부 사무국장 1명, 행정 대리 2명, 회계 담당 1명",
+    "regionalDTA": "지역 지부 (Regional DTAs)",
+    "regionalDTAMembers": "전국 10개 종카(Dzongkhag) 태권도 협회 지부 사범 10명 파견 운영"
   },
   "project": {
     "badge": "ODA Project",
@@ -53,7 +62,29 @@
     "tabMilestones": "사업 추진 현황",
     "tabCenter": "아이코닉 센터 건립",
     "overviewDesc": "본 프로젝트는 한국국제협력단(KOICA)의 지원을 받아 수행되는 공적개발원조(ODA) 사업입니다. 사업의 수행 관리(PMC)는 (사)한국국제개발협력센터(KIDC)가 담당하고 있으며, 스포츠(태권도) 수련에 보건위생 교육과 가치 함양 교육을 융합하여 부탄 청소년들의 전인적 역량 강화를 목적으로 합니다.",
-    "centerDesc": "부탄 팀푸에 건립 중인 아이코닉 센터는 청소년들을 위한 최초의 다목적 전용 교육·체육 시설로서, 완공 후 연맹의 메인 도장 및 세미나 허브로 사용됩니다."
+    "centerDesc": "부탄 팀푸에 건립 중인 아이코닉 센터는 청소년들을 위한 최초의 다목적 전용 교육·체육 시설로서, 완공 후 연맹의 메인 도장 및 세미나 허브로 사용됩니다.",
+    "timeline": {
+      "t2023": "ODA 사업 착수 및 타당성 조사",
+      "d2023": "KOICA 파트너십 구축, 현지 청소년 개발 인지도 기초 조사 완수 및 연맹 중심 사범 파견 계획 승인.",
+      "t2024": "정규 학교 시범 교육 프로그램 개시",
+      "d2024": "초·중·고 12개교 정규 보급 사범 배치, 총 1,087명 청소년 1차 교육 수료 및 교재 검수 완료.",
+      "t2025": "팀푸 청소년 다목적 체육관 착공",
+      "d2025": "KOICA 지원금 기반 대지 확보 및 청소년 체육 교육 전문 Iconic Center 건물 기공식 시행.",
+      "t2026": "아이코닉 센터 완공 및 현지 이관 준비 (예정)",
+      "d2026": "연말 공식 개관 후, 교육 매뉴얼 및 인프라 관리 권한을 부탄태권도연맹(BTF)에 전면 이전."
+    },
+    "centerProgressTitle": "센터 건립 공정률 (Construction Progress)",
+    "centerProgressDesc": "2026년 말 완공 및 개관을 목표로 골조 공사를 완료하고 내부 설비 마감 공정이 한창 진행 중입니다.",
+    "centerTableTitle": "층별 용도 및 면적 제원 (Facility Specifications)",
+    "tableColFloor": "구분 (Floor)",
+    "tableColUse": "주요 용도 (Primary Use)",
+    "tableColArea": "면적 (Area)",
+    "floor1": "1층 (First Floor)",
+    "use1": "메인 태권도 수련 경기장 및 탈의실, 샤워실",
+    "floor2": "2층 (Second Floor)",
+    "use2": "체력단련실, 다목적 강의실 및 시각 교육 세미나실",
+    "floor3": "3층 (Third Floor)",
+    "use3": "연맹 사무국 행정 집무실, 강사 숙소 및 귀빈실"
   },
   "programs": {
     "badge": "태권도 활동",
