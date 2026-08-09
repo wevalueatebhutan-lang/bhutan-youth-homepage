@@ -47,12 +47,12 @@
   },
   "project": {
     "badge": "ODA Project",
-    "title": "Youth Capacity Building Project",
+    "title": "Project for Youth Development through Sports, Health, and Value Education in Bhutan",
     "subtitle": "An official ODA project focused on youth education and infrastructure in partnership with KOICA.",
     "tabOverview": "Overview",
     "tabMilestones": "Milestones",
     "tabCenter": "Iconic Center",
-    "overviewDesc": "Supported by the Korea International Cooperation Agency (KOICA), this ODA project aims to foster the capacity of Bhutanese youth by integrating physical training (Taekwondo) with global health education and core value alignment.",
+    "overviewDesc": "Supported by the Korea International Cooperation Agency (KOICA), this ODA project aims to foster the capacity of Bhutanese youth by integrating physical training (Taekwondo) with global health education and core value alignment. The project is managed by the Korea International Development Cooperation Center (KIDC) as the Project Management Consultant (PMC).",
     "centerDesc": "Under construction in Thimphu, the Iconic Center serves as the primary hub for multi-purpose youth sports and educational training."
   },
   "programs": {
@@ -109,10 +109,10 @@
     ]
   },
   "footer": {
-    "support": "This portal is operated by BTF with the support of KOICA (Korea International Cooperation Agency).",
+    "support": "This portal is operated by BTF and KIDC with the support of KOICA (Korea International Cooperation Agency).",
     "navTitle": "Sitemap",
     "contactTitle": "Contact us",
     "address": "Taekwondo Training Center, Doebum Lam, Thimphu, Bhutan. P. Box # 1332",
-    "partnersTitle": "Official Partners"
+    "partnersTitle": "Partners & PMC"
   }
 }

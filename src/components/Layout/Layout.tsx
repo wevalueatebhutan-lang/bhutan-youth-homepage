@@ -184,6 +184,11 @@ export default function Layout({ children }: LayoutProps) {
             <div className="footer-col">
               <h4>{t('footer.partnersTitle')}</h4>
               <p>Korea International Cooperation Agency (KOICA)</p>
+              <p>
+                <a href="https://www.kidc.or.kr/" target="_blank" rel="noreferrer" style={{ color: '#cbd5e1', textDecoration: 'underline' }}>
+                  (사)한국국제개발협력센터 (KIDC)
+                </a>
+              </p>
               <p>Bhutan Taekwondo Federation (BTF)</p>
             </div>
           </div>
