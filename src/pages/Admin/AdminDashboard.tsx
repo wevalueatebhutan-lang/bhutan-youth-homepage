@@ -82,17 +82,17 @@ export default function AdminDashboard() {
       await addDoc(collection(db, 'notices'), {
         title: noticeTitle,
         content: noticeContent,
-        tag: noticeTag === 'update' ? '공사' : noticeTag === 'event' ? '행사' : '보고서',
+        tag: noticeTag === 'update' ? 'Construction' : noticeTag === 'event' ? 'Events' : 'Report',
         date: today,
         createdAt: serverTimestamp(),
       });
       setNoticeTitle('');
       setNoticeContent('');
       await fetchNotices();
-      alert('공지사항이 성공적으로 등록되었습니다.');
+      alert('Notice published successfully.');
     } catch (err) {
       console.error(err);
-      alert('공지사항 등록에 실패했습니다.');
+      alert('Failed to publish notice. Please try again.');
     } finally {
       setLoadingNotice(false);
     }
@@ -157,10 +157,10 @@ export default function AdminDashboard() {
       if (fileInput) fileInput.value = '';
 
       await fetchGallery();
-      alert('갤러리 이미지가 성공적으로 등록되었습니다.');
+      alert('Photo uploaded to gallery successfully.');
     } catch (err) {
       console.error('Image processing error:', err);
-      alert('이미지 업로드 처리에 실패했습니다. 다시 시도해 주세요.');
+      alert('Failed to upload image. Please try again.');
     } finally {
       setLoadingGallery(false);
     }
@@ -168,7 +168,7 @@ export default function AdminDashboard() {
 
   // Delete Notice
   const handleDeleteNotice = async (id: string) => {
-    if (!confirm('정말 이 공지사항을 삭제하시겠습니까?')) return;
+    if (!confirm('Are you sure you want to delete this notice?')) return;
     try {
       await deleteDoc(doc(db, 'notices', id));
       await fetchNotices();
@@ -179,7 +179,7 @@ export default function AdminDashboard() {
 
   // Delete Gallery Item
   const handleDeleteGallery = async (id: string) => {
-    if (!confirm('정말 이 이미지를 삭제하시겠습니까?')) return;
+    if (!confirm('Are you sure you want to delete this photo?')) return;
     try {
       await deleteDoc(doc(db, 'gallery', id));
       await fetchGallery();
