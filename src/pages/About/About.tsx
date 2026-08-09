@@ -116,6 +116,9 @@ export default function About() {
 
                 <div>
                   <h4 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--accent)', textTransform: 'uppercase', margin: '0 0 6px' }}>📞 Contacts</h4>
+                  <p style={{ margin: '0 0 6px', fontSize: '0.92rem', color: '#0f172a', fontWeight: 700 }}>
+                    Tel: +975 02 339899
+                  </p>
                   <p style={{ margin: 0, fontSize: '0.92rem', color: '#0f172a', fontWeight: 700 }}>
                     Email: <a href="mailto:info@bhutantaekwondo.org" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>info@bhutantaekwondo.org</a>
                   </p>
