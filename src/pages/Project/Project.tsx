@@ -111,8 +111,17 @@ export default function Project() {
                 <span style={{ fontSize: '1.1rem', fontWeight: 900, color: 'var(--accent)' }}>65%</span>
               </div>
               {/* Progress bar */}
-              <div style={{ width: '100%', height: '8px', background: '#e2e8f0', borderRadius: '99px', overflow: 'hidden' }}>
-                <div style={{ width: '65%', height: '100%', background: 'var(--accent)' }} />
+              <div style={{ width: '100%', height: '14px', background: '#e2e8f0', borderRadius: '99px', overflow: 'hidden', boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.06)' }}>
+                <div 
+                  className="animate-progress-65"
+                  style={{ 
+                    width: '0%', // 0%에서 시작해 애니메이션에 의해 65%로 채워짐
+                    height: '100%', 
+                    background: 'linear-gradient(90deg, var(--accent) 0%, #f97316 100%)', 
+                    borderRadius: '99px',
+                    boxShadow: '0 1px 2px rgba(249, 115, 22, 0.2)'
+                  }} 
+                />
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '8px', margin: '8px 0 0' }}>
                 {t('project.centerProgressDesc')}

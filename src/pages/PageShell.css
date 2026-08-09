@@ -464,6 +464,16 @@
   to { transform: scale(1); opacity: 1; }
 }
 
+/* ── PROGRESS BAR ANIMATIONS ── */
+@keyframes progressFill65 {
+  from { width: 0%; }
+  to { width: 65%; }
+}
+
+.animate-progress-65 {
+  animation: progressFill65 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .portal-tab-container {
