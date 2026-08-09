@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="home-page-container">
-      {/* ── 1. KYWA STYLE HERO SLIDER BANNER ── */}
+      {/* ── 1. PORTAL HERO SLIDER BANNER ── */}
       <section className="portal-hero-slider">
         <div className="hero-slider-inner container">
           <div className="hero-slider-text">
@@ -54,7 +54,6 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-slider-image">
-            <div className="decor-ring" />
             <img src="/taekwondo_hero.jpg" alt="Bhutan Youth Training" />
           </div>
         </div>
@@ -65,7 +64,6 @@ export default function Home() {
         <div className="container">
           <div className="quick-grid">
             <a href="/programs" className="quick-card card-blue">
-              <div className="quick-card-icon">🥋</div>
               <div className="quick-card-body">
                 <h3>{t('home.quickAccess.manualsTitle')}</h3>
                 <p>{t('home.quickAccess.manualsDesc')}</p>
@@ -73,7 +71,6 @@ export default function Home() {
               </div>
             </a>
             <a href="/iconic-center" className="quick-card card-emerald">
-              <div className="quick-card-icon">🏢</div>
               <div className="quick-card-body">
                 <h3>{t('home.quickAccess.centerTitle')}</h3>
                 <p>{t('home.quickAccess.centerDesc')}</p>
@@ -81,7 +78,6 @@ export default function Home() {
               </div>
             </a>
             <a href="/programs" className="quick-card card-purple">
-              <div className="quick-card-icon">📚</div>
               <div className="quick-card-body">
                 <h3>{t('programs.badge')}</h3>
                 <p>가치 보건 교육 교재 다운로드</p>
@@ -89,7 +85,6 @@ export default function Home() {
               </div>
             </a>
             <a href="/community" className="quick-card card-orange">
-              <div className="quick-card-icon">📢</div>
               <div className="quick-card-body">
                 <h3>{t('home.quickAccess.newsTitle')}</h3>
                 <p>{t('home.quickAccess.newsDesc')}</p>
@@ -106,7 +101,7 @@ export default function Home() {
           {/* Left Column: Board Notices */}
           <div className="dashboard-board-card">
             <div className="dashboard-card-header">
-              <h2>📢 {t('community.sectionNotice')}</h2>
+              <h2>{t('community.sectionNotice')}</h2>
               <a href="/community" className="more-view-link">전체보기 +</a>
             </div>
             
@@ -139,7 +134,7 @@ export default function Home() {
           {/* Right Column: Facebook Feed */}
           <div className="dashboard-sns-card">
             <div className="dashboard-card-header">
-              <h2>📸 {t('community.sectionFacebook')}</h2>
+              <h2>{t('community.sectionFacebook')}</h2>
               <a href="https://www.facebook.com/bhutantaekwondo/?locale=ko_KR" target="_blank" rel="noreferrer" className="more-view-link">Facebook Page →</a>
             </div>
             <div className="dashboard-facebook-widget">

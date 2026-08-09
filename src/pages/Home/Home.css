@@ -7,9 +7,9 @@
   background: var(--bg-sub);
 }
 
-/* ── 1. KYWA STYLE HERO SLIDER BANNER ── */
+/* ── 1. PORTAL HERO SLIDER BANNER ── */
 .portal-hero-slider {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); /* Deep Blue to Slate Dark */
+  background: #0f172a; /* Flat Slate Dark - No exaggerated gradients */
   padding-block: 70px 60px;
   color: #ffffff;
   overflow: hidden;
@@ -38,7 +38,7 @@
   font-size: 0.82rem;
   font-weight: 700;
   padding: 6px 14px;
-  border-radius: 99px;
+  border-radius: 4px;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -70,10 +70,9 @@
   color: #0f172a;
   font-weight: 700;
   padding: 14px 28px;
-  border-radius: 6px;
+  border-radius: 4px;
   text-decoration: none;
   font-size: 0.95rem;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
   transition: transform 0.2s, background 0.2s;
 }
 
@@ -87,7 +86,7 @@
   color: #ffffff;
   font-weight: 700;
   padding: 12px 28px;
-  border-radius: 6px;
+  border-radius: 4px;
   text-decoration: none;
   font-size: 0.95rem;
   transition: background 0.2s, border-color 0.2s;
@@ -111,20 +110,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-  border: 4px solid rgba(255,255,255,0.1);
-}
-
-.decor-ring {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 10px solid rgba(13, 148, 136, 0.15);
-  z-index: 1;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* ── 2. PORTAL QUICK SERVICE GRID ── */

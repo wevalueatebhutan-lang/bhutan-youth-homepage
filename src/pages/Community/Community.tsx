@@ -118,7 +118,7 @@ export default function Community() {
         {(activeFilter === 'all' || activeFilter === 'notices') && (
           <section className="content-section" style={{ marginTop: '24px' }}>
             <div className="section-header-border">
-              <h2>📢 {t('community.sectionNotice')}</h2>
+              <h2>{t('community.sectionNotice')}</h2>
             </div>
             
             {loadingNotices ? (
@@ -176,7 +176,7 @@ export default function Community() {
         {(activeFilter === 'all' || activeFilter === 'gallery') && (
           <section className="content-section" style={{ marginTop: '50px' }}>
             <div className="section-header-border">
-              <h2>📸 {t('community.sectionGallery')}</h2>
+              <h2>{t('community.sectionGallery')}</h2>
             </div>
             <p style={{ color: 'var(--text-muted)', margin: '12px 0 24px' }}>
               {t('community.galleryDesc')}
@@ -213,7 +213,7 @@ export default function Community() {
         {(activeFilter === 'all' || activeFilter === 'facebook') && (
           <section className="content-section" style={{ marginTop: '50px', paddingBottom: '60px' }}>
             <div className="section-header-border">
-              <h2>👥 {t('community.sectionFacebook')}</h2>
+              <h2>{t('community.sectionFacebook')}</h2>
             </div>
             <div className="facebook-container-layout" style={{ display: 'flex', gap: '32px', marginTop: '24px', alignItems: 'flex-start' }}>
               {/* Widget Iframe */}

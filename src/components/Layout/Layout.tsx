@@ -31,7 +31,7 @@ export default function Layout({ children }: LayoutProps) {
       <div className="utility-bar">
         <div className="container utility-inner">
           <span className="gov-badge">
-            🇧🇹 Official Portal of Bhutan Youth Development Project
+            Official Portal of Bhutan Youth Development Project
           </span>
           <div className="utility-right">
             {/* Language Switcher */}
@@ -48,7 +48,6 @@ export default function Layout({ children }: LayoutProps) {
       <header className="main-header">
         <div className="container header-inner">
           <Link to="/" className="brand-logo">
-            <span className="brand-logo-symbol">🥋</span>
             <div className="brand-text">
               <strong>BHUTAN TAEKWONDO FEDERATION</strong>
               <span>Youth Development Project Portal</span>
@@ -126,7 +125,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container footer-inner">
           <div className="footer-top-row">
             <div className="footer-logo">
-              <strong>🥋 BTF × KOICA</strong>
+              <strong>BTF × KOICA</strong>
               <p>{t('footer.support')}</p>
             </div>
             <div className="footer-sns">

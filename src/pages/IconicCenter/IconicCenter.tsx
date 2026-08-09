@@ -19,10 +19,10 @@ export default function IconicCenter() {
         {/* Section 1: Vision & Purpose */}
         <section className="content-section" style={{ textAlign: 'left' }}>
           <div className="section-header-border">
-            <h2>🏢 {t('center.sectionOverview')}</h2>
+            <h2>{t('center.sectionOverview')}</h2>
           </div>
           <p style={{ lineHeight: '1.7', color: '#334155', fontSize: '0.98rem' }}>
-            부탄 팀푸(Thimphu)에 조성 중인 **아이코닉 센터 (Iconic Center)**는 한국국제협력단(KOICA)과 부탄태권도연맹(BTF)의 긴밀한 글로벌 공조 하에 건립 중인 부탄 최초의 **청소년 다목적 체육 교육관**입니다. 청소년들이 태권도 수련과 보건위생 교육, 공동체 가치 학습을 결합해 건강한 민주 시민으로 거듭날 수 있는 허브 역할을 맡게 됩니다.
+            부탄 팀푸(Thimphu)에 조성 중인 **아이코닉 센터 (Iconic Center)**는 한국국제협력단(KOICA)과 부탄태권도연맹(BTF)의 긴밀한 글로벌 ODA 협정 하에 건립 중인 부탄 최초의 **청소년 다목적 체육 교육관**입니다. 청소년들이 태권도 수련과 보건위생 교육, 공동체 가치 학습을 결합해 건강한 사회 구성원으로 성장할 수 있는 핵심 인프라 역할을 담당합니다.
           </p>
         </section>
 
@@ -71,14 +71,14 @@ export default function IconicCenter() {
         {/* Section 3: Construction Road Map */}
         <section className="content-section" style={{ textAlign: 'left' }}>
           <div className="section-header-border">
-            <h2>🛠️ {t('center.sectionConstruction')}</h2>
+            <h2>{t('center.sectionConstruction')}</h2>
           </div>
           <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontSize: '0.9rem' }}>
             2026년 말 공식 개관을 목표로 골조 및 내장 시공이 순조롭게 추진되고 있습니다.
           </p>
           
-          <div className="progress-banner" style={{ background: 'var(--bg-sub)', border: '1px solid var(--border)', borderRadius: '8px', padding: '24px', display: 'flex', alignItems: 'center', gap: '24px' }}>
-            <div className="progress-circle-badge" style={{ flex: '0 0 80px', height: '80px', borderRadius: '50%', background: 'var(--accent)', color: '#ffffff', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>
+          <div className="progress-banner" style={{ background: 'var(--bg-sub)', border: '1px solid var(--border)', borderRadius: '4px', padding: '24px', display: 'flex', alignItems: 'center', gap: '24px' }}>
+            <div className="progress-circle-badge" style={{ flex: '0 0 80px', height: '80px', borderRadius: '4px', background: 'var(--accent)', color: '#ffffff', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>
               <span style={{ fontSize: '0.7rem', opacity: 0.9 }}>공정률</span>
               <span style={{ fontSize: '1.3rem' }}>65%</span>
             </div>
@@ -97,7 +97,7 @@ export default function IconicCenter() {
         {/* Section 4: Document Center */}
         <section className="content-section" style={{ paddingBottom: '40px', textAlign: 'left' }}>
           <div className="section-header-border">
-            <h2>📄 {t('center.sectionDocs')}</h2>
+            <h2>{t('center.sectionDocs')}</h2>
           </div>
           <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontSize: '0.9rem' }}>
             아이코닉 센터의 다목적 공간 대관 규칙 및 예약 서식을 다운로드할 수 있습니다.
@@ -110,7 +110,7 @@ export default function IconicCenter() {
               style={{ fontSize: '0.88rem', fontWeight: 700, padding: '12px 24px', borderColor: 'var(--border)' }}
               onClick={() => alert('시설 대관 규정 PDF 서류 다운로드를 시작합니다.')}
             >
-              📥 대관 규정 및 규칙.pdf
+              대관 규정 및 규칙.pdf
             </a>
             <a 
               href="https://wevalueatebhutan-6a832.web.app/rental_form.docx" 
@@ -119,7 +119,7 @@ export default function IconicCenter() {
               style={{ fontSize: '0.88rem', fontWeight: 700, padding: '12px 24px', borderColor: 'var(--border)' }}
               onClick={() => alert('시설 대관 신청서 docx 서식을 다운로드합니다.')}
             >
-              📥 대관 신청 서식.docx
+              대관 신청 서식.docx
             </a>
           </div>
         </section>

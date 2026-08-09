@@ -5,7 +5,6 @@ import '../PageShell.css';
 interface ProgramDetail {
   id: string;
   category: 'sports' | 'health' | 'value' | 'cooperation';
-  icon: string;
   title: string;
   desc: string;
   details: string[];
@@ -20,7 +19,6 @@ export default function Programs() {
     {
       id: 'prog-1',
       category: 'sports',
-      icon: '🥋',
       title: t('programs.taekwondo.title'),
       desc: t('programs.taekwondo.desc'),
       details: [
@@ -28,12 +26,11 @@ export default function Programs() {
         '핵심 내용: 태권도 기본 품새, 겨루기 기술 및 국기원 공인 단(품)증 취득 프로세스 지원',
         '성과: ODA 사업 1차 만족도 4.00/5.00점 획득, 신체적 역량 증대 확인',
       ],
-      pdfLink: 'https://wevalueatebhutan-6a832.web.app/taekwondo_manual.pdf', // Mock / placeholder to download
+      pdfLink: 'https://wevalueatebhutan-6a832.web.app/taekwondo_manual.pdf',
     },
     {
       id: 'prog-2',
       category: 'health',
-      icon: '🩺',
       title: t('programs.health.title'),
       desc: t('programs.health.desc'),
       details: [
@@ -46,7 +43,6 @@ export default function Programs() {
     {
       id: 'prog-3',
       category: 'value',
-      icon: '🤝',
       title: t('programs.value.title'),
       desc: t('programs.value.desc'),
       details: [
@@ -59,7 +55,6 @@ export default function Programs() {
     {
       id: 'prog-4',
       category: 'cooperation',
-      icon: '🌍',
       title: 'KOICA × BTF ODA Partnership',
       desc: '한국과 부탄의 청소년 체육 발전을 위한 국제 협력 프로젝트 정보와 연차 보고서 아카이브를 제공합니다.',
       details: [
@@ -85,11 +80,10 @@ export default function Programs() {
       <div className="container page-content">
         {/* Category: Sports Education */}
         <section className="content-section">
-          <h2 className="program-category-title">🎯 Sports & Martial Arts (스포츠 수련 교육)</h2>
+          <h2 className="program-category-title">Sports &amp; Martial Arts (스포츠 수련 교육)</h2>
           <div className="programs-grid">
             {programsData.filter(p => p.category === 'sports').map((p) => (
               <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
-                <div className="program-card-icon">{p.icon}</div>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <span className="program-card-action">상세보기 &amp; 다운로드 →</span>
@@ -100,11 +94,10 @@ export default function Programs() {
 
         {/* Category: Health & Value Education */}
         <section className="content-section">
-          <h2 className="program-category-title">🌱 Health &amp; Value Development (보건 및 가치 성장 교육)</h2>
+          <h2 className="program-category-title">Health &amp; Value Development (보건 및 가치 성장 교육)</h2>
           <div className="programs-grid">
             {programsData.filter(p => p.category === 'health' || p.category === 'value').map((p) => (
               <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
-                <div className="program-card-icon">{p.icon}</div>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <span className="program-card-action">상세보기 &amp; 다운로드 →</span>
@@ -115,11 +108,10 @@ export default function Programs() {
 
         {/* Category: Cooperation */}
         <section className="content-section" style={{ paddingBottom: '40px' }}>
-          <h2 className="program-category-title">🌐 Global Partnership &amp; ODA (국제협력 및 공적 개발 원조)</h2>
+          <h2 className="program-category-title">Global Partnership &amp; ODA (국제협력 및 공적 개발 원조)</h2>
           <div className="programs-grid">
             {programsData.filter(p => p.category === 'cooperation').map((p) => (
               <div className="program-card" key={p.id} onClick={() => setSelectedProgram(p)}>
-                <div className="program-card-icon">{p.icon}</div>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <span className="program-card-action">상세보기 &amp; 다운로드 →</span>
@@ -135,7 +127,7 @@ export default function Programs() {
           <div className="modal-content-box" onClick={(e) => e.stopPropagation()}>
             {/* Modal Header */}
             <div className="modal-header">
-              <h3>{selectedProgram.icon} {selectedProgram.title}</h3>
+              <h3>{selectedProgram.title}</h3>
               <button className="modal-close-btn" onClick={() => setSelectedProgram(null)}>×</button>
             </div>
             
@@ -144,11 +136,11 @@ export default function Programs() {
               <p className="modal-desc">{selectedProgram.desc}</p>
               
               <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0f172a', margin: '0 0 10px' }}>
-                📋 주요 교육 개요 &amp; 성과 지표
+                주요 교육 개요 &amp; 성과 지표
               </h4>
               <ul className="modal-detail-list">
                 {selectedProgram.details.map((detail, idx) => (
-                  <li key={idx}>• {detail}</li>
+                  <li key={idx}>{detail}</li>
                 ))}
               </ul>
             </div>
@@ -162,7 +154,7 @@ export default function Programs() {
                 style={{ fontSize: '0.88rem', fontWeight: 700, padding: '10px 20px' }}
                 onClick={() => alert('교육용 교재 매핑 PDF 다운로드를 시작합니다.')}
               >
-                💾 교재 PDF 다운로드
+                교재 PDF 다운로드
               </a>
               <button 
                 className="btn btn-outline" 
